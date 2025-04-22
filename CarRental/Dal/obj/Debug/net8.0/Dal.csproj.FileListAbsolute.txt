@@ -1,0 +1,14 @@
+H:\Project\CarRental\Dal\bin\Debug\net8.0\Dal.deps.json
+H:\Project\CarRental\Dal\bin\Debug\net8.0\Dal.runtimeconfig.json
+H:\Project\CarRental\Dal\bin\Debug\net8.0\Dal.dll
+H:\Project\CarRental\Dal\bin\Debug\net8.0\Dal.pdb
+H:\Project\CarRental\Dal\obj\Debug\net8.0\Dal.csproj.AssemblyReference.cache
+H:\Project\CarRental\Dal\obj\Debug\net8.0\Dal.GeneratedMSBuildEditorConfig.editorconfig
+H:\Project\CarRental\Dal\obj\Debug\net8.0\Dal.AssemblyInfoInputs.cache
+H:\Project\CarRental\Dal\obj\Debug\net8.0\Dal.AssemblyInfo.cs
+H:\Project\CarRental\Dal\obj\Debug\net8.0\Dal.csproj.CoreCompileInputs.cache
+H:\Project\CarRental\Dal\obj\Debug\net8.0\Dal.dll
+H:\Project\CarRental\Dal\obj\Debug\net8.0\refint\Dal.dll
+H:\Project\CarRental\Dal\obj\Debug\net8.0\Dal.pdb
+H:\Project\CarRental\Dal\obj\Debug\net8.0\Dal.genruntimeconfig.cache
+H:\Project\CarRental\Dal\obj\Debug\net8.0\ref\Dal.dll

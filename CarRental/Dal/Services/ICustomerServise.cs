@@ -14,6 +14,6 @@ namespace Dal.Services
         bool IsExist(int id);
         bool AddNewCustomer(int id,  string firstName, string? lastNamer, int phoneNumber, string? email, string city, string street, int? buildingNumber );
         Customer GetCustomerById(int id);
-        Renting GetAllRenting(int)
+        Renting GetAllRenting(int id);
     }
 }

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Dal.Services
 {
-    internal class CustomerService
+    public class CustomerService
     {
 
-        public 
+         
 
         public bool AddNewCustomer(int id,string firstName, string lastName, int phoneNumber, string email,string city, string street, int buildingNumber )
         {
-
+            return true;
         }
     }
 }

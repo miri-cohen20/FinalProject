@@ -9,7 +9,13 @@ public partial class Car
 
     public int Seats { get; set; }
 
-    public bool Status { get; set; }
+    public bool CleanStatus { get; set; }
+
+    public bool ProperStatus { get; set; }
+
+    public DateTime FinalCleaning { get; set; }
+
+    public DateTime LastCorrection { get; set; }
 
     public virtual ICollection<Renting> Rentings { get; set; } = new List<Renting>();
 }

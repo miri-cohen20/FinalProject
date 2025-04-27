@@ -5,15 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using Dal.models;
 
-namespace Dal.Services
+namespace Dal.Api
 {
     internal interface ICustomerServise
     {
         List<int> GetAllIdCustomer();
         List<Customer> GetAllCustomer();
         bool IsExist(int id);
-        bool AddNewCustomer(int id,  string firstName, string? lastNamer, int phoneNumber, string? email, string city, string street, int? buildingNumber );
+        bool AddNewCustomer(int id, string firstName, string? lastNamer, int phoneNumber, string? email, string city, string street, int? buildingNumber);
         Customer GetCustomerById(int id);
         Renting GetAllRenting(int id);
+
     }
 }

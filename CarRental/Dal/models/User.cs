@@ -20,4 +20,8 @@ public partial class User
     public string Street { get; set; } = null!;
 
     public int? BuildingNumber { get; set; }
+
+    public virtual Customer? Customer { get; set; }
+
+    public virtual Worker? Worker { get; set; }
 }

@@ -21,6 +21,8 @@ public partial class dbClass : DbContext
 
     public virtual DbSet<Price> Prices { get; set; }
 
+    public virtual DbSet<RentalOrder> RentalOrders { get; set; }
+
     public virtual DbSet<Renting> Rentings { get; set; }
 
     public virtual DbSet<Role> Roles { get; set; }
@@ -35,7 +37,7 @@ public partial class dbClass : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename='H:\\Project\\CarRental\\Dal\\Data\\database.mdf';Integrated Security=True;Connect Timeout=30");
+        => optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename='H:\\Project\\CarRental\\Dal\\Data\\database.mdf';Integrated Security=True;Connect Timeout=30;Encrypt=True;Integrated Security=True;Connect Timeout=30");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -46,6 +48,8 @@ public partial class dbClass : DbContext
             entity.ToTable("Car");
 
             entity.Property(e => e.Id).ValueGeneratedNever();
+            entity.Property(e => e.FinalCleaning).HasColumnType("datetime");
+            entity.Property(e => e.LastCorrection).HasColumnType("datetime");
         });
 
         modelBuilder.Entity<Customer>(entity =>
@@ -53,23 +57,11 @@ public partial class dbClass : DbContext
             entity.HasKey(e => e.Id).HasName("PK__Customer__6037852F88FA4804");
 
             entity.Property(e => e.Id).ValueGeneratedNever();
-            entity.Property(e => e.BuildingNumber).HasColumnName("buildingNumber");
-            entity.Property(e => e.City)
-                .HasMaxLength(50)
-                .HasColumnName("city");
-            entity.Property(e => e.Email)
-                .HasMaxLength(50)
-                .HasColumnName("email");
-            entity.Property(e => e.FirstName)
-                .HasMaxLength(50)
-                .HasColumnName("firstName");
-            entity.Property(e => e.LastName)
-                .HasMaxLength(50)
-                .HasColumnName("lastName");
-            entity.Property(e => e.PhonNumber).HasColumnName("phonNumber");
-            entity.Property(e => e.Street)
-                .HasMaxLength(50)
-                .HasColumnName("street");
+
+            entity.HasOne(d => d.IdNavigation).WithOne(p => p.Customer)
+                .HasForeignKey<Customer>(d => d.Id)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Customers_ToTable");
         });
 
         modelBuilder.Entity<Price>(entity =>
@@ -78,8 +70,21 @@ public partial class dbClass : DbContext
 
             entity.ToTable("Price");
 
-            entity.Property(e => e.Price1).HasColumnName("price");
+            entity.Property(e => e.PriceForHour).HasColumnName("priceForHour");
             entity.Property(e => e.Time).HasColumnName("time");
+        });
+
+        modelBuilder.Entity<RentalOrder>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__RentalOr__3214EC07AFC6C64C");
+
+            entity.ToTable("RentalOrder");
+
+            entity.Property(e => e.Id).ValueGeneratedNever();
+            entity.Property(e => e.Car).HasColumnName("car");
+            entity.Property(e => e.Date).HasColumnName("date");
+            entity.Property(e => e.Status).HasColumnName("status");
+            entity.Property(e => e.TimeOfDay).HasColumnName("timeOfDay");
         });
 
         modelBuilder.Entity<Renting>(entity =>
@@ -160,23 +165,11 @@ public partial class dbClass : DbContext
             entity.HasKey(e => e.Id).HasName("PK__tmp_ms_x__3214EC071E1A4C2B");
 
             entity.Property(e => e.Id).ValueGeneratedNever();
-            entity.Property(e => e.BuildingNumber).HasColumnName("buildingNumber");
-            entity.Property(e => e.City)
-                .HasMaxLength(50)
-                .HasColumnName("city");
-            entity.Property(e => e.Email)
-                .HasMaxLength(50)
-                .HasColumnName("email");
-            entity.Property(e => e.FirstName)
-                .HasMaxLength(50)
-                .HasColumnName("firstName");
-            entity.Property(e => e.LastName)
-                .HasMaxLength(50)
-                .HasColumnName("lastName");
-            entity.Property(e => e.PhonNumber).HasColumnName("phonNumber");
-            entity.Property(e => e.Street)
-                .HasMaxLength(50)
-                .HasColumnName("street");
+
+            entity.HasOne(d => d.IdNavigation).WithOne(p => p.Worker)
+                .HasForeignKey<Worker>(d => d.Id)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Workers_ToTable");
 
             entity.HasOne(d => d.Rols).WithMany(p => p.Workers)
                 .HasForeignKey(d => d.RolsId)

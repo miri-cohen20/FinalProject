@@ -11,5 +11,5 @@ public partial class Price
 
     public int Time { get; set; }
 
-    public double Price1 { get; set; }
+    public double PriceForHour { get; set; }
 }

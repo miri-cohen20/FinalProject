@@ -48,8 +48,14 @@ public partial class dbClass : DbContext
             entity.ToTable("Car");
 
             entity.Property(e => e.Id).ValueGeneratedNever();
+            entity.Property(e => e.City)
+                .HasMaxLength(50)
+                .HasColumnName("city");
             entity.Property(e => e.FinalCleaning).HasColumnType("datetime");
             entity.Property(e => e.LastCorrection).HasColumnType("datetime");
+            entity.Property(e => e.Street)
+                .HasMaxLength(50)
+                .HasColumnName("street");
         });
 
         modelBuilder.Entity<Customer>(entity =>
@@ -154,6 +160,9 @@ public partial class dbClass : DbContext
             entity.Property(e => e.LastName)
                 .HasMaxLength(50)
                 .HasColumnName("lastName");
+            entity.Property(e => e.Password)
+                .HasMaxLength(50)
+                .HasColumnName("password");
             entity.Property(e => e.PhonNumber).HasColumnName("phonNumber");
             entity.Property(e => e.Street)
                 .HasMaxLength(50)

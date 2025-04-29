@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dal.Api;
+using Dal.models;
 
 namespace Bl.Services
 {
@@ -13,9 +14,11 @@ namespace Bl.Services
     {
         ICustomerServise _icustomerServise;
         IWorkerService _workerService;
-        public SighIn(ICustomerServise icustomerServise, IWorkerService workerService) {
+        IUser _user;
+        public SighIn(ICustomerServise icustomerServise, IWorkerService workerService, IUser user) {
             _icustomerServise= icustomerServise;
             _workerService= workerService;
+            _user= user;
         }
         public bool IsCustomer(int id)
         {
@@ -29,7 +32,10 @@ namespace Bl.Services
 
         public bool Log(int id, string password)
         {
-            throw new NotImplementedException();
+            if(!_user.IsUserExist(id)) 
+                return false;
+             return _user.GetAllUsers().FirstOrDefault(u => u.Password.Equals(password))!=null;
+            
         }
     }
 }

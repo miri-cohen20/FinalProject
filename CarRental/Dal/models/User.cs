@@ -21,6 +21,8 @@ public partial class User
 
     public int? BuildingNumber { get; set; }
 
+    public string Password { get; set; } = null!;
+
     public virtual Customer? Customer { get; set; }
 
     public virtual Worker? Worker { get; set; }

@@ -11,6 +11,7 @@ namespace Dal.Api
     {
         User GetUser(int id);
         List<User> GetAllUsers();
+        bool IsUserExist(int id);
 
 
 

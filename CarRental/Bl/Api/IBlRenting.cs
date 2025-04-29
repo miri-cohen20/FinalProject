@@ -10,7 +10,7 @@ namespace Bl.Api
 {
     internal interface IBlRenting
     {
-        List<Renting> GetAllMyRenting();
+        List<Renting> GetAllMyRenting(int id);
         List<Car> CarAvailableInCertainTime(DateTime fromTime);
         List<Car> CarAvailableInCertainTime(DateTime fromTime, DateTime toTime);
         List<Car> CarAvailableInCertainSeats(int numberOfSeats);

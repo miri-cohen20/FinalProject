@@ -17,5 +17,9 @@ public partial class Car
 
     public DateTime LastCorrection { get; set; }
 
+    public string City { get; set; } = null!;
+
+    public string Street { get; set; } = null!;
+
     public virtual ICollection<Renting> Rentings { get; set; } = new List<Renting>();
 }

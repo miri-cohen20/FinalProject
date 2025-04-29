@@ -11,6 +11,7 @@ namespace Dal.Api
     {
 
         List<Renting> GetAllRenting();
+        bool UpdateReturnTimeRenting(int idRenting, DateTime returnTime);
 
     }
 }

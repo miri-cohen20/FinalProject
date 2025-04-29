@@ -7,7 +7,7 @@ using Dal.models;
 
 namespace Dal.Api
 {
-    internal interface IUser
+    public interface IUser
     {
         User GetUser(int id);
         List<User> GetAllUsers();

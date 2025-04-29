@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace Dal.Api
 {
-    internal interface IRenting
+    public interface IRenting
     {
+
+        List<Renting> GetAllRenting();
 
     }
 }

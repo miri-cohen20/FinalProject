@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Dal.Api
 {
-    internal interface IRentelOrder
+    public interface IRentelOrder
     {
 
         List<RentalOrder> GetAllRentalOrder();

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Dal.Api
 {
-    internal interface IPrice
+    public interface IPrice
     {
         double GetPriceForHour(int seats, int time);
         int GetIdPrice(int seats, int time);

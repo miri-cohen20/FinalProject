@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Dal.Api
 {
-    internal interface IWorkerService
+    public interface IWorkerService
     {
         List<int> GetAllIdWorker();
         List<Worker> GetAllWorker();

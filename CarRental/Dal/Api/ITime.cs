@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Dal.Api
 {
-    internal interface ITime
+    public interface ITime
     {
         int GetIdOfDuration(string duration);
         string GetIdDuration(int id);

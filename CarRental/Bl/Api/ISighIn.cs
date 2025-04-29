@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bl.Api
 {
-    internal interface ILogIn
+    internal interface ISighIn
     {
 
         bool Log(int id, string password);

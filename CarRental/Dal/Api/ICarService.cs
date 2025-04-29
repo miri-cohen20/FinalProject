@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Dal.Api
 {
-    internal interface ICarService
+    public interface ICarService
     {
         Car GetCar(int id);
         int GetCarSeats(int id);

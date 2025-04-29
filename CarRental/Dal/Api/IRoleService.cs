@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Dal.Api
 {
-    internal interface IRoleService
+    public interface IRoleService
     {
         int GetRoleId(string Description);
         string GetRoleDescription(int id);

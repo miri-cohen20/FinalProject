@@ -7,7 +7,7 @@ using Dal.models;
 
 namespace Dal.Api
 {
-    internal interface ICustomerServise
+    public interface ICustomerServise
     {
         List<int> GetAllIdCustomer();
         List<Customer> GetAllCustomer();

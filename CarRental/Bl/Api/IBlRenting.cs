@@ -28,7 +28,7 @@ namespace Bl.Api
         void Improperty(int idRenting, string descreption);
         
         DateTime MaxRenting(DateTime inputDate);
-        public DateTime? UntilWhenCanACertainCarBeRented(int idCar, DateTime from);
+        DateTime? UntilWhenCanACertainCarBeRented(int idCar, DateTime from);
 
     }
 }

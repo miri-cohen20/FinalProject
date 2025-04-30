@@ -117,8 +117,21 @@ namespace Bl.Services
 
         public bool GetIfCanRentalUntilCertainTime(int idRenting, DateTime untilTime)
         {
-            throw new NotImplementedException();
+            // בדוק אם ההשכרה קיימת
+            var renting = _renting.GetAllRenting().FirstOrDefault(r => r.Id == idRenting);
+            if (renting == null)
+            {
+                throw new ArgumentException("Renting with the specified ID does not exist.");
+            }
+
+            // בדוק אם untilTime הוא אחרי תאריך הסיום של ההשכרה
+            if( untilTime < renting.ReturnTime)
+                return false;
+            return UntilWhenCanACertainCarBeRented(renting.IdCar, renting.ReturnTime) != null && UntilWhenCanACertainCarBeRented(renting.IdCar, renting.ReturnTime) >= untilTime;
+
         }
+
+ 
 
         public double GetPriceForRenting(int idCar, DateTime fromTime, DateTime toTime)
         {
@@ -172,19 +185,12 @@ namespace Bl.Services
         }
 
 
-
-
-
-
         public DateTime MaxRenting(DateTime inputDate)
         {
             return inputDate.AddMonths(1);
         }
 
-        public DateTime GetUntilCanRental(int idCustomer, int idRenting)
-        {
-            throw new NotImplementedException();
-        }
+
 
         public void Improperty(int idRenting, string descreption)
         {
@@ -201,6 +207,9 @@ namespace Bl.Services
             throw new NotImplementedException();
         }
 
-
+        public DateTime GetUntilCanRental(int idCustomer, int idRenting)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

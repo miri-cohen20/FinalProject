@@ -22,10 +22,13 @@ namespace Bl.Api
 
         List<Renting> GetAllCurrentRentals(int idCustomer);
         DateTime GetUntilCanRental(int idCustomer, int idRenting);
-        bool GetIfCanRentalUntilCertainTime(int idRenting, DateTime untilTime);
+        bool ExtendingRentalForACertainPeriodTime(int idRenting, int customerId, DateTime untilTime);
 
         void LackOfCleanliness(int idRenting, string descreption);
         void Improperty(int idRenting, string descreption);
+        
+        DateTime MaxRenting(DateTime inputDate);
+        public DateTime? UntilWhenCanACertainCarBeRented(int idCar, DateTime from);
 
     }
 }

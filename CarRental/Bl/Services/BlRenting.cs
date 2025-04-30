@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Dal.Api;
 using System.Diagnostics;
+using System.Runtime.ConstrainedExecution;
 
 namespace Bl.Services
 {
@@ -90,7 +91,7 @@ namespace Bl.Services
 
         }
 
-        public bool GetIfCanRentalUntilCertainTime(int idRenting, int customerId, DateTime untilTime)
+        public bool ExtendingRentalForACertainPeriodTime (int idRenting, int customerId, DateTime untilTime)
         {
             DateTime currentTime = DateTime.Now;
 
@@ -148,6 +149,38 @@ namespace Bl.Services
             return priceForHours * totalHours;
         }
 
+        public DateTime? UntilWhenCanACertainCarBeRented(int idCar, DateTime from)
+        {
+            var carExists = _carService.GetAllCar().Any(car => car.Id == idCar);
+            if (!carExists)
+            {
+                throw new ArgumentException("Car with the specified ID does not exist.");
+            }
+
+            var conflictingRentals= _renting.GetAllRenting()
+                .Where(r=>r.IdCar == idCar &&
+                r.RentalTime<from &&
+                r.ReturnTime>from)
+                .ToList(); 
+            if(conflictingRentals.Count==0)
+            {
+
+                return MaxRenting(from);
+            }
+
+            return null;
+        }
+
+
+
+
+
+
+        public DateTime MaxRenting(DateTime inputDate)
+        {
+            return inputDate.AddMonths(1);
+        }
+
         public DateTime GetUntilCanRental(int idCustomer, int idRenting)
         {
             throw new NotImplementedException();
@@ -167,5 +200,7 @@ namespace Bl.Services
         {
             throw new NotImplementedException();
         }
+
+
     }
 }

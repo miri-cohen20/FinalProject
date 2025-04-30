@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "H:\\Project\\CarRental\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|h:\\project\\carrental\\bl\\services\\blrenting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|solutionrelative:bl\\services\\blrenting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|h:\\project\\carrental\\bl\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|solutionrelative:bl\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|h:\\project\\carrental\\bl\\services\\sighup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|solutionrelative:bl\\services\\sighup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|h:\\project\\carrental\\bl\\services\\sighin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|solutionrelative:bl\\services\\sighin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|h:\\project\\carrental\\bl\\api\\isighin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|solutionrelative:bl\\api\\isighin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|h:\\project\\carrental\\bl\\api\\iblrenting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|solutionrelative:bl\\api\\iblrenting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|h:\\project\\carrental\\bl\\services\\blrenting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|solutionrelative:bl\\services\\blrenting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|h:\\project\\carrental\\dal\\dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -106,11 +122,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "H:\\Project\\CarRental\\Bl\\Class1.cs",
+              "RelativeDocumentMoniker": "Bl\\Class1.cs",
+              "ToolTip": "H:\\Project\\CarRental\\Bl\\Class1.cs",
+              "RelativeToolTip": "Bl\\Class1.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T11:27:26.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "SighUp.cs",
+              "DocumentMoniker": "H:\\Project\\CarRental\\Bl\\Services\\SighUp.cs",
+              "RelativeDocumentMoniker": "Bl\\Services\\SighUp.cs",
+              "ToolTip": "H:\\Project\\CarRental\\Bl\\Services\\SighUp.cs",
+              "RelativeToolTip": "Bl\\Services\\SighUp.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAIwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T11:27:22.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SighIn.cs",
+              "DocumentMoniker": "H:\\Project\\CarRental\\Bl\\Services\\SighIn.cs",
+              "RelativeDocumentMoniker": "Bl\\Services\\SighIn.cs",
+              "ToolTip": "H:\\Project\\CarRental\\Bl\\Services\\SighIn.cs",
+              "RelativeToolTip": "Bl\\Services\\SighIn.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T11:27:21.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ISighIn.cs",
+              "DocumentMoniker": "H:\\Project\\CarRental\\Bl\\Api\\ISighIn.cs",
+              "RelativeDocumentMoniker": "Bl\\Api\\ISighIn.cs",
+              "ToolTip": "H:\\Project\\CarRental\\Bl\\Api\\ISighIn.cs",
+              "RelativeToolTip": "Bl\\Api\\ISighIn.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T11:27:20.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "IBlRenting.cs",
               "DocumentMoniker": "H:\\Project\\CarRental\\Bl\\Api\\IBlRenting.cs",
               "RelativeDocumentMoniker": "Bl\\Api\\IBlRenting.cs",
@@ -122,25 +190,21 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "BlRenting.cs",
               "DocumentMoniker": "H:\\Project\\CarRental\\Bl\\Services\\BlRenting.cs",
               "RelativeDocumentMoniker": "Bl\\Services\\BlRenting.cs",
-              "ToolTip": "H:\\Project\\CarRental\\Bl\\Services\\BlRenting.cs*",
-              "RelativeToolTip": "Bl\\Services\\BlRenting.cs*",
-              "ViewState": "AQIAAJEAAAAAAAAAAAAIwJ8AAABIAAAA",
+              "ToolTip": "H:\\Project\\CarRental\\Bl\\Services\\BlRenting.cs",
+              "RelativeToolTip": "Bl\\Services\\BlRenting.cs",
+              "ViewState": "AQIAANUAAAAAAAAAAAAiwJ8AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-30T06:39:36.72Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Dal.csproj",
               "DocumentMoniker": "H:\\Project\\CarRental\\Dal\\Dal.csproj",
               "RelativeDocumentMoniker": "Dal\\Dal.csproj",
@@ -148,12 +212,11 @@
               "RelativeToolTip": "Dal\\Dal.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-27T10:52:50.464Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T10:52:50.464Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "ILogIn.cs",
               "DocumentMoniker": "H:\\Project\\CarRental\\Bl\\Api\\ILogIn.cs",
               "RelativeDocumentMoniker": "Bl\\Api\\ILogIn.cs",
@@ -165,7 +228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "ISighUp.cs",
               "DocumentMoniker": "H:\\Project\\CarRental\\Bl\\Api\\ISighUp.cs",
               "RelativeDocumentMoniker": "Bl\\Api\\ISighUp.cs",
@@ -177,7 +240,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "IUser.cs",
               "DocumentMoniker": "H:\\Project\\CarRental\\Dal\\Api\\IUser.cs",
               "RelativeDocumentMoniker": "Dal\\Api\\IUser.cs",
@@ -189,7 +252,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "Time.cs",
               "DocumentMoniker": "H:\\Project\\CarRental\\Dal\\models\\Time.cs",
               "RelativeDocumentMoniker": "Dal\\models\\Time.cs",
@@ -201,7 +264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "Price.cs",
               "DocumentMoniker": "H:\\Project\\CarRental\\Dal\\models\\Price.cs",
               "RelativeDocumentMoniker": "Dal\\models\\Price.cs",
@@ -213,7 +276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "IPrice.cs",
               "DocumentMoniker": "H:\\Project\\CarRental\\Dal\\Api\\IPrice.cs",
               "RelativeDocumentMoniker": "Dal\\Api\\IPrice.cs",
@@ -225,7 +288,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "ITime.cs",
               "DocumentMoniker": "H:\\Project\\CarRental\\Dal\\Api\\ITime.cs",
               "RelativeDocumentMoniker": "Dal\\Api\\ITime.cs",
@@ -237,7 +300,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "Renting.cs",
               "DocumentMoniker": "H:\\Project\\CarRental\\Dal\\models\\Renting.cs",
               "RelativeDocumentMoniker": "Dal\\models\\Renting.cs",
@@ -249,7 +312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "RentalOrder.cs",
               "DocumentMoniker": "H:\\Project\\CarRental\\Dal\\models\\RentalOrder.cs",
               "RelativeDocumentMoniker": "Dal\\models\\RentalOrder.cs",
@@ -261,7 +324,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "IWorkerService.cs",
               "DocumentMoniker": "H:\\Project\\CarRental\\Dal\\Api\\IWorkerService.cs",
               "RelativeDocumentMoniker": "Dal\\Api\\IWorkerService.cs",
@@ -273,7 +336,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "Worker.cs",
               "DocumentMoniker": "H:\\Project\\CarRental\\Dal\\models\\Worker.cs",
               "RelativeDocumentMoniker": "Dal\\models\\Worker.cs",
@@ -285,7 +348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "Role.cs",
               "DocumentMoniker": "H:\\Project\\CarRental\\Dal\\models\\Role.cs",
               "RelativeDocumentMoniker": "Dal\\models\\Role.cs",
@@ -297,7 +360,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "ICarService.cs",
               "DocumentMoniker": "H:\\Project\\CarRental\\Dal\\Api\\ICarService.cs",
               "RelativeDocumentMoniker": "Dal\\Api\\ICarService.cs",
@@ -309,7 +372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "ICustomerServise.cs",
               "DocumentMoniker": "H:\\Project\\CarRental\\Dal\\Api\\ICustomerServise.cs",
               "RelativeDocumentMoniker": "Dal\\Api\\ICustomerServise.cs",
@@ -321,7 +384,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "User.cs",
               "DocumentMoniker": "H:\\Project\\CarRental\\Dal\\models\\User.cs",
               "RelativeDocumentMoniker": "Dal\\models\\User.cs",
@@ -333,7 +396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "IRenting.cs",
               "DocumentMoniker": "H:\\Project\\CarRental\\Dal\\Api\\IRenting.cs",
               "RelativeDocumentMoniker": "Dal\\Api\\IRenting.cs",
@@ -345,7 +408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "CustomerService.cs",
               "DocumentMoniker": "H:\\Project\\CarRental\\Dal\\Services\\CustomerService.cs",
               "RelativeDocumentMoniker": "Dal\\Services\\CustomerService.cs",
@@ -357,7 +420,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "IRoleService.cs",
               "DocumentMoniker": "H:\\Project\\CarRental\\Dal\\Api\\IRoleService.cs",
               "RelativeDocumentMoniker": "Dal\\Api\\IRoleService.cs",
@@ -369,7 +432,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "IRentelOrder.cs",
               "DocumentMoniker": "H:\\Project\\CarRental\\Dal\\Api\\IRentelOrder.cs",
               "RelativeDocumentMoniker": "Dal\\Api\\IRentelOrder.cs",
@@ -381,7 +444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 26,
               "Title": "Car.cs",
               "DocumentMoniker": "H:\\Project\\CarRental\\Dal\\models\\Car.cs",
               "RelativeDocumentMoniker": "Dal\\models\\Car.cs",
@@ -393,7 +456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 27,
               "Title": "dbClass.cs",
               "DocumentMoniker": "H:\\Project\\CarRental\\Dal\\models\\dbClass.cs",
               "RelativeDocumentMoniker": "Dal\\models\\dbClass.cs",

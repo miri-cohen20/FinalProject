@@ -21,5 +21,9 @@ public partial class Car
 
     public string Street { get; set; } = null!;
 
+    public string DescriptionCleaning { get; set; } = null!;
+
+    public string DescriptionProper { get; set; } = null!;
+
     public virtual ICollection<Renting> Rentings { get; set; } = new List<Renting>();
 }

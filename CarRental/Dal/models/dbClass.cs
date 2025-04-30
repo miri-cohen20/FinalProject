@@ -43,7 +43,7 @@ public partial class dbClass : DbContext
     {
         modelBuilder.Entity<Car>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Car__3214EC07B082D67B");
+            entity.HasKey(e => e.Id).HasName("PK__tmp_ms_x__3214EC0792DAC60F");
 
             entity.ToTable("Car");
 
@@ -51,8 +51,17 @@ public partial class dbClass : DbContext
             entity.Property(e => e.City)
                 .HasMaxLength(50)
                 .HasColumnName("city");
+            entity.Property(e => e.CleanStatus).HasColumnName("cleanStatus");
+            entity.Property(e => e.DescriptionCleaning)
+                .HasMaxLength(50)
+                .HasColumnName("descriptionCleaning");
+            entity.Property(e => e.DescriptionProper)
+                .HasMaxLength(50)
+                .HasColumnName("descriptionProper");
             entity.Property(e => e.FinalCleaning).HasColumnType("datetime");
             entity.Property(e => e.LastCorrection).HasColumnType("datetime");
+            entity.Property(e => e.ProperStatus).HasColumnName("properStatus");
+            entity.Property(e => e.Seats).HasColumnName("seats");
             entity.Property(e => e.Street)
                 .HasMaxLength(50)
                 .HasColumnName("street");
@@ -174,6 +183,7 @@ public partial class dbClass : DbContext
             entity.HasKey(e => e.Id).HasName("PK__tmp_ms_x__3214EC071E1A4C2B");
 
             entity.Property(e => e.Id).ValueGeneratedNever();
+            entity.Property(e => e.Price).HasColumnName("price");
 
             entity.HasOne(d => d.IdNavigation).WithOne(p => p.Worker)
                 .HasForeignKey<Worker>(d => d.Id)

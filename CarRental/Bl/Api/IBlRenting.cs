@@ -20,8 +20,8 @@ namespace Bl.Api
         bool RentingCar(int idCar, int idCustomer, DateTime fromTime, DateTime toTime);
         double GetPriceForRenting(int idCar, DateTime fromTime, DateTime toTime);
 
-        List<Renting> GetAllCurrentRentals(int idCustomer);
-        DateTime GetUntilCanRental(int idCustomer, int idRenting);
+        List<Renting> GetAllMyCurrentRentals(int idCustomer);
+        DateTime? GetUntilCanRental(int idCustomer, int idRenting);
         bool ExtendingRentalForACertainPeriodTime(int idRenting, int customerId, DateTime untilTime);
 
         void LackOfCleanliness(int idRenting, string descreption);

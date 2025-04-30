@@ -11,6 +11,8 @@ public partial class Worker
 
     public int RolsId { get; set; }
 
+    public double Price { get; set; }
+
     public virtual User IdNavigation { get; set; } = null!;
 
     public virtual Role Rols { get; set; } = null!;

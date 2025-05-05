@@ -10,6 +10,7 @@ using System.Diagnostics;
 using System.Runtime.ConstrainedExecution;
 using Dal.Services;
 
+
 namespace Bl.Services
 {
     internal class BlRenting : IBlRenting
@@ -247,6 +248,17 @@ namespace Bl.Services
             {
                 throw new InvalidOperationException("The renting is either inactive or has ended more than 15 minutes ago.");
             }
+        }
+
+        public void EndRental(int idCustomer, int idRenting)
+        {
+            if (!_customerServise.GetAllCustomer().Any(c => c.Id == idCustomer))
+                throw new ArgumentException("Customer with the specified ID does not exist.");
+            if (!_renting.GetAllRenting().Any(_renting => _renting.Id == idRenting))
+                throw new ArgumentException("Renting with the specified ID does not exist.");
+            Renting r = _renting.GetAllRenting().Find(_renting => _renting.Id == idRenting);
+            r.Available = true;
+            r.ReturnTime = DateTime.Now;
         }
         public bool IsRentingActive(int idRenting)
         {

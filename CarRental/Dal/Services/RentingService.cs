@@ -198,7 +198,7 @@ namespace Dal.Services
             {
                 Renting newRenting = new Renting
                 {
-
+                    Available = false,
                     Id = idCar,
                     IdCustomer = idCustomer,
                     RentalTime = rentalTime,

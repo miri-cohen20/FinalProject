@@ -11,6 +11,7 @@ namespace Dal.Api
     {
 
         List<Renting> GetAllRenting();
+        
         bool UpdateReturnTimeRenting(int idRenting, DateTime returnTime);
         bool AddRenting( int idCar, int idCustomer, DateTime rentalTime, DateTime returnTime, double price);
 

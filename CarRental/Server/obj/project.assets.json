@@ -5157,7 +5157,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\וובר תמר\\.nuget\\packages\\": {},
+    "C:\\Users\\וובר תמר.MBJCOMP\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
@@ -5166,14 +5166,14 @@
       "projectUniqueName": "H:\\Project\\CarRental\\Server\\Server.csproj",
       "projectName": "Server",
       "projectPath": "H:\\Project\\CarRental\\Server\\Server.csproj",
-      "packagesPath": "C:\\Users\\וובר תמר\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\וובר תמר.MBJCOMP\\.nuget\\packages\\",
       "outputPath": "H:\\Project\\CarRental\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\וובר תמר\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\וובר תמר.MBJCOMP\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

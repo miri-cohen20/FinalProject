@@ -30,12 +30,15 @@ namespace Bl.Services
             return _workerService.WokerIsExist(id);
         }
 
-        public bool Log(int id, string password)
+        public User Log(int id, string password)
         {
-            if(!_user.IsUserExist(id)) 
-                return false;
-             return _user.GetAllUsers().FirstOrDefault(u => u.Password.Equals(password))!=null;
-            
+            if(_user.GetUser(id)==null)
+                throw new ArgumentException($"User with id: {id} is not exist");
+            if (_user.GetUser(id).Password != password)
+                throw new ArgumentException("the password is not correct");
+            return _user.GetUser(id);
         }
+
+
     }
 }

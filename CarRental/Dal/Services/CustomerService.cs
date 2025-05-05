@@ -4,6 +4,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,8 +23,43 @@ namespace Dal.Services
             _context = context;
         }
 
+        public bool AddNewCustomer(User user)
+        {
+            if (IsExist(user.Id))
+            {
+                return false;
+            }
 
-        public bool AddNewCustomer(int id, string firstName, string? lastName, int phoneNumber, string? email, string city, string street, int? buildingNumber)
+            try
+            {
+                Customer newCustomer = new Customer
+                {
+                    Id = user.Id,
+                    IdNavigation = new User
+                    {
+                        Password = user.Password,
+                        FirstName = user.FirstName,
+                        LastName = user.LastName,
+                        PhonNumber = user.PhonNumber,
+                        Email = user.Email,
+                        City = user.City,
+                        Street = user.Street,
+                        BuildingNumber = user.BuildingNumber
+                    }
+                };
+
+                _context.Customers.Add(newCustomer);
+                _context.SaveChanges();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error adding customer: {ex.Message}");
+                return false;
+            }
+        }
+        public bool AddNewCustomer(int id, string firstName, string password, string? lastName, int phoneNumber, string? email, string city, string street, int? buildingNumber)
         {
 
             if (IsExist(id))
@@ -38,6 +74,7 @@ namespace Dal.Services
                     Id = id,
                     IdNavigation = new User
                     {
+                        Password = password,
                         FirstName = firstName,
                         LastName = lastName,
                         PhonNumber = phoneNumber,
@@ -48,8 +85,7 @@ namespace Dal.Services
                     }
                 };
 
-
-                _context.Customers.Add(newCustomer);
+        _context.Customers.Add(newCustomer);
                 _context.SaveChanges();
 
                 return true;
@@ -154,21 +190,59 @@ namespace Dal.Services
             return _context.Workers.Any(c => c.Id == id);
         }
 
-        public bool AddNewWoker(int id, string firstName, string? lastName, int phoneNumber, string? email, string city, string street, int? buildingNumber, int hoursMonth, int roleId)
+
+
+        public bool AddNewWorker(User user, int hoursMonth, int roleId)
         {
 
-            if (IsExist(id))
+            try
             {
+                Worker newWorker = new Worker
+                {
+                    Id = user.Id,
+                    RolsId = roleId,
+                    HoursMonth = hoursMonth,
+                    IdNavigation = new User
+                    {
+                        Password = user.Password,
+                        FirstName = user.Password,
+                        LastName = user.LastName,
+                        PhonNumber = user.PhonNumber,
+                        Email = user.Email,
+                        City = user.City,
+                        Street = user.Street,
+                        BuildingNumber = user.BuildingNumber
+
+                    }
+                };
+
+
+                _context.Workers.Add(newWorker);
+                _context.SaveChanges();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error adding Worker: {ex.Message}");
                 return false;
             }
+        }
+
+
+        public bool AddNewWorker(int id, string firstName, string? lastName, string password, int phoneNumber, string? email, string city, string street, int? buildingNumber, int hoursMonth, int roleId)
+        {
 
             try
             {
                 Worker newWorker = new Worker
                 {
                     Id = id,
+                    RolsId = roleId,
+                    HoursMonth = hoursMonth,
                     IdNavigation = new User
                     {
+                        Password = password,
                         FirstName = firstName,
                         LastName = lastName,
                         PhonNumber = phoneNumber,
@@ -288,6 +362,13 @@ namespace Dal.Services
                 return new List<int>(); 
             }
         }
+
+        public bool IsUserExist(int id)
+        {
+            return _context.Users.Any(u => u.Id == id);
+        }
+
+     
     }
 
 }

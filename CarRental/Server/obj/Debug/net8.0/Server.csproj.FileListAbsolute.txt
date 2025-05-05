@@ -167,3 +167,7 @@ H:\Project\CarRental\Server\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runt
 H:\Project\CarRental\Server\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 H:\Project\CarRental\Server\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 H:\Project\CarRental\Server\obj\Debug\net8.0\Server.sourcelink.json
+H:\Project\CarRental\Server\bin\Debug\net8.0\Bl.dll
+H:\Project\CarRental\Server\bin\Debug\net8.0\Dal.dll
+H:\Project\CarRental\Server\bin\Debug\net8.0\Bl.pdb
+H:\Project\CarRental\Server\bin\Debug\net8.0\Dal.pdb

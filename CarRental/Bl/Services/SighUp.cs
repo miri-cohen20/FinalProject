@@ -1,7 +1,9 @@
 ﻿using Bl.Api;
 using Dal.Api;
+using Dal.models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +21,7 @@ namespace Bl.Services
             _workerService = workerService;
             _user = user;
         }
+
         public bool CreateCustomer(int id, string firstName,string password, int phoneNumber, string city, string street, int buildingNumber = 0, string lastName = null, string email = null)
         {
            if(!_user.IsUserExist(id))
@@ -28,9 +31,14 @@ namespace Bl.Services
             
         }
 
-        public bool CreateCustomer(int id, string firstName, int phoneNumber, string city, string street, int buildingNumber = 0, string lastName = null, string email = null)
+        public bool CreateCustomer(User user)
         {
-            throw new NotImplementedException();
+           
+
+            if (!_user.IsUserExist(user.Id))
+                return false;
+            _icustomerServise.AddNewCustomer(user);
+            return true;
         }
 
         public bool CreateWorker(int id, string firstName,string password, int phoneNumber, string city, string street, int hoursMonth, int roleId, int buildingNumber = 0, string lastName = null, string email = null)

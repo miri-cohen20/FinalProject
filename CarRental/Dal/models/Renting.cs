@@ -17,6 +17,8 @@ public partial class Renting
 
     public double Price { get; set; }
 
+    public bool Available { get; set; }
+
     public virtual Car IdCarNavigation { get; set; } = null!;
 
     public virtual Customer IdCustomerNavigation { get; set; } = null!;

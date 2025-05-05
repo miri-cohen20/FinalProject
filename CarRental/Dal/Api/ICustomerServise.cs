@@ -12,10 +12,11 @@ namespace Dal.Api
         List<int> GetAllIdCustomer();
         List<Customer> GetAllCustomer();
         bool IsExist(int id);
-        bool AddNewCustomer(int id, string firstName, string password, string? lastNamer, int phoneNumber, string? email, string city, string street, int? buildingNumber);
+        bool AddNewCustomer(int id, string firstName, string password, string? lastName, int phoneNumber, string? email, string city, string street, int? buildingNumber);
+
         bool AddNewCustomer(User user);
         Customer GetCustomerById(int id);
-        Renting GetAllRenting(int id);
+        List<Renting> GetAllRenting(int id);
 
     }
 }

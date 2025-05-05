@@ -108,6 +108,7 @@ public partial class dbClass : DbContext
 
             entity.ToTable("Renting");
 
+            entity.Property(e => e.Available).HasColumnName("available");
             entity.Property(e => e.Price).HasColumnName("price");
             entity.Property(e => e.RentalTime).HasColumnType("datetime");
             entity.Property(e => e.ReturnTime).HasColumnType("datetime");

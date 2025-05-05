@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dal.models;
-using Microsoft.EntityFrameworkCore.Storage.Json;
 
 namespace Bl.Api
 {
-    internal interface IBlRenting
+    public interface IBlRenting
     {
         List<Renting> GetAllMyRenting(int id);
         List<Car> CarAvailableInCertainTime(DateTime fromTime);
@@ -16,6 +15,7 @@ namespace Bl.Api
         List<Car> CarAvailableInCertainSeats(int numberOfSeats);
         List<Car> CarAvailableInCertainPlace(string city);
         List<Car> CarAvailableInCertainPlace(string city, string street);
+        void EndRental(int idCustomer, int idRenting);
 
         bool RentingCar(int idCar, int idCustomer, DateTime fromTime, DateTime toTime);
         double GetPriceForRenting(int idCar, DateTime fromTime, DateTime toTime);

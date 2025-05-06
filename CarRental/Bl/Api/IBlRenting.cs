@@ -9,6 +9,8 @@ namespace Bl.Api
 {
     public interface IBlRenting
     {
+        List<Car> GetAllCars();
+        List<Renting> GetAllRenting();
         List<Renting> GetAllMyRenting(int id);
         List<Car> CarAvailableInCertainTime(DateTime fromTime);
         List<Car> CarAvailableInCertainTime(DateTime fromTime, DateTime toTime);
@@ -28,6 +30,7 @@ namespace Bl.Api
         void Improperty(int idRenting, string descreption);
         
         DateTime MaxRenting(DateTime inputDate);
+        void UpdateCustomer(Customer customerDto);
         DateTime? UntilWhenCanACertainCarBeRented(int idCar, DateTime from);
 
     }

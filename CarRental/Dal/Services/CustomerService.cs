@@ -12,7 +12,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Dal.Services
 {
-    public class CustomerService : ICustomerServise, IWorkerService, IUser,IRoleService
+    public class CustomerService : ICustomerServise, IWorkerService, IUser, IRoleService
     {
 
         List<Customer> customer = new List<Customer>();
@@ -23,43 +23,19 @@ namespace Dal.Services
             _context = context;
         }
 
-        public bool AddNewCustomer(User user)
+        public bool AddNewCustomer(Customer user)
         {
-            if (IsExist(user.Id))
-            {
-                return false;
-            }
 
-            try
-            {
-                Customer newCustomer = new Customer
-                {
-                    Id = user.Id,
-                    IdNavigation = new User
-                    {
-                        Password = user.Password,
-                        FirstName = user.FirstName,
-                        LastName = user.LastName,
-                        PhonNumber = user.PhonNumber,
-                        Email = user.Email,
-                        City = user.City,
-                        Street = user.Street,
-                        BuildingNumber = user.BuildingNumber
-                    }
-                };
 
-                _context.Customers.Add(newCustomer);
-                _context.SaveChanges();
 
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error adding customer: {ex.Message}");
-                return false;
-            }
+            _context.Customers.Add(user);
+            _context.SaveChanges();
+
+            return true;
         }
-        public bool AddNewCustomer(int id, string firstName, string password, string? lastName, int phoneNumber, string? email, string city, string street, int? buildingNumber)
+    
+        
+        public bool AddNewCustomer(int id, string firstName, string password, string? lastName, string phoneNumber, string? email, string city, string street, int? buildingNumber)
         {
 
             if (IsExist(id))
@@ -85,7 +61,7 @@ namespace Dal.Services
                     }
                 };
 
-        _context.Customers.Add(newCustomer);
+                _context.Customers.Add(newCustomer);
                 _context.SaveChanges();
 
                 return true;
@@ -190,7 +166,42 @@ namespace Dal.Services
             return _context.Workers.Any(c => c.Id == id);
         }
 
+        public bool AddNewCustomer(User user)
+        {
 
+            try
+            {
+                Customer newCustomer = new Customer
+                {
+                    Id = user.Id,
+                   
+                    IdNavigation = new User
+                    {
+                        Password = user.Password,
+                        FirstName = user.Password,
+                        LastName = user.LastName,
+                        PhonNumber = user.PhonNumber,
+                        Email = user.Email,
+                        City = user.City,
+                        Street = user.Street,
+                        BuildingNumber = user.BuildingNumber
+
+                    }
+                };
+
+
+                _context.Customers.Add(newCustomer);
+                _context.SaveChanges();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error adding Worker: {ex.Message}");
+                Console.WriteLine($"Error adding Worker: {ex.Message}");
+                return false;
+            }
+        }
 
         public bool AddNewWorker(User user, int hoursMonth, int roleId)
         {
@@ -225,148 +236,174 @@ namespace Dal.Services
             catch (Exception ex)
             {
                 Console.WriteLine($"Error adding Worker: {ex.Message}");
-                return false;
-            }
-        }
-
-
-        public bool AddNewWorker(int id, string firstName, string? lastName, string password, int phoneNumber, string? email, string city, string street, int? buildingNumber, int hoursMonth, int roleId)
-        {
-
-            try
-            {
-                Worker newWorker = new Worker
-                {
-                    Id = id,
-                    RolsId = roleId,
-                    HoursMonth = hoursMonth,
-                    IdNavigation = new User
-                    {
-                        Password = password,
-                        FirstName = firstName,
-                        LastName = lastName,
-                        PhonNumber = phoneNumber,
-                        Email = email,
-                        City = city,
-                        Street = street,
-                        BuildingNumber = buildingNumber
-                    }
-                };
-
-
-                _context.Workers.Add(newWorker);
-                _context.SaveChanges();
-
-                return true;
-            }
-            catch (Exception ex)
-            {
                 Console.WriteLine($"Error adding Worker: {ex.Message}");
                 return false;
             }
-
         }
 
-        public Worker GetWorkerById(int id)
+        public bool UpdateCustomer(Customer customer)
         {
-            try
+            Customer _customer = _context.Customers.Find(customer.Id);
+            if (_customer == null)
             {
-                return _context.Workers.Find(id);
+                return false; // Customer not found
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error retrieving Worker by ID {id}: {ex.Message}");
-                return null;
-            }
+
+
+            _customer.IdNavigation.LastName = customer.IdNavigation.LastName;
+            _customer.IdNavigation.FirstName = customer.IdNavigation.FirstName;
+            _customer.IdNavigation.PhonNumber = customer.IdNavigation.PhonNumber;
+            _customer.IdNavigation.Email = customer.IdNavigation.Email;
+            _customer.IdNavigation.Password = customer.IdNavigation.Password;
+            _customer.IdNavigation.City = customer.IdNavigation.City;
+            _customer.IdNavigation.Street = customer.IdNavigation.Street;
+            _customer.IdNavigation.BuildingNumber = customer.IdNavigation.BuildingNumber;
+
+
+
+            _context.SaveChanges(); // Save changes to the database
+            return true; // Return the updated DTO
         }
 
-        public double GetWorkerPrice(int id)
+
+
+    public bool AddNewWorker(int id, string firstName, string? lastName, string password, string phoneNumber, string? email, string city, string street, int? buildingNumber, int hoursMonth, int roleId)
+    {
+
+        try
         {
-            try
+            Worker newWorker = new Worker
             {
-                var worker = _context.Workers.Find(id);
-                if (worker != null)
+                Id = id,
+                RolsId = roleId,
+                HoursMonth = hoursMonth,
+                IdNavigation = new User
                 {
-                    return worker.Price;
+                    Password = password,
+                    FirstName = firstName,
+                    LastName = lastName,
+                    PhonNumber = phoneNumber,
+                    Email = email,
+                    City = city,
+                    Street = street,
+                    BuildingNumber = buildingNumber
                 }
-                else
-                {
-                    throw new Exception("Worker not found.");
-                }
-            }
-            catch (Exception ex)
+            };
+
+
+            _context.Workers.Add(newWorker);
+            _context.SaveChanges();
+
+            return true;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error adding Worker: {ex.Message}");
+            return false;
+        }
+
+    }
+
+    public Worker GetWorkerById(int id)
+    {
+        try
+        {
+            return _context.Workers.Find(id);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error retrieving Worker by ID {id}: {ex.Message}");
+            return null;
+        }
+    }
+
+    public double GetWorkerPrice(int id)
+    {
+        try
+        {
+            var worker = _context.Workers.Find(id);
+            if (worker != null)
             {
-                Console.WriteLine($"Error retrieving worker price for ID {id}: {ex.Message}");
-                throw;
-                {
-                }
+                return worker.Price;
             }
-        }
-
-        public User GetUser(int id)
-        {
-            return _context.Users.Find(id);
-        }
-
-        public List<User> GetAllUsers()
-        {
-            return _context.Users.ToList();
-        }
-
-        public int GetRoleId(string description)
-        {
-            var role = _context.Roles.FirstOrDefault(r => r.Description.Equals(description, StringComparison.OrdinalIgnoreCase));
-            return role?.Id ?? -1; 
-        }
-
-        public string GetRoleDescription(int id)
-        {
-            var role = _context.Roles.Find(id);
-            return role?.Description ?? string.Empty; 
-        }
-
-        public double GetRolePrice(int id)
-        {
-            var role = _context.Roles.Find(id);
-            return role?.PriceHour ?? 0; 
-        }
-
-        public ICollection<Worker> GetWorkerOnTheRole(int id)
-        {
-            var role = _context.Roles.Include(r => r.Workers).FirstOrDefault(r => r.Id == id);
-            return role?.Workers ?? new List<Worker>(); 
-        }
-
-        public List<Role> GetAllRoles()
-        {
-            try
+            else
             {
-                return _context.Roles.ToList();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error retrieving roles: {ex.Message}");
-                return new List<Role>(); 
+                throw new Exception("Worker not found.");
             }
         }
-
-        public List<int> GetAllRolesId()
+        catch (Exception ex)
         {
-            try
+            Console.WriteLine($"Error retrieving worker price for ID {id}: {ex.Message}");
+            throw;
             {
-                return _context.Roles.Select(r => r.Id).ToList();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error retrieving role IDs: {ex.Message}");
-                return new List<int>(); 
             }
         }
+    }
 
-        public bool IsUserExist(int id)
+    public User GetUser(int id)
+    {
+        return _context.Users.Find(id);
+    }
+
+    public List<User> GetAllUsers()
+    {
+        return _context.Users.ToList();
+    }
+
+    public int GetRoleId(string description)
+    {
+        var role = _context.Roles.FirstOrDefault(r => r.Description.Equals(description, StringComparison.OrdinalIgnoreCase));
+        return role?.Id ?? -1;
+    }
+
+    public string GetRoleDescription(int id)
+    {
+        var role = _context.Roles.Find(id);
+        return role?.Description ?? string.Empty;
+    }
+
+    public double GetRolePrice(int id)
+    {
+        var role = _context.Roles.Find(id);
+        return role?.PriceHour ?? 0;
+    }
+
+    public ICollection<Worker> GetWorkerOnTheRole(int id)
+    {
+        var role = _context.Roles.Include(r => r.Workers).FirstOrDefault(r => r.Id == id);
+        return role?.Workers ?? new List<Worker>();
+    }
+
+    public List<Role> GetAllRoles()
+    {
+        try
         {
-            return _context.Users.Any(u => u.Id == id);
+            return _context.Roles.ToList();
         }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error retrieving roles: {ex.Message}");
+            return new List<Role>();
+        }
+    }
+
+    public List<int> GetAllRolesId()
+    {
+        try
+        {
+            return _context.Roles.Select(r => r.Id).ToList();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error retrieving role IDs: {ex.Message}");
+            return new List<int>();
+        }
+    }
+
+    public bool IsUserExist(int id)
+    {
+        return _context.Users.Any(u => u.Id == id);
+    }
 
      
     }

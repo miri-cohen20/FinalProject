@@ -10,7 +10,7 @@ using Dal.models;
 namespace Bl.Services
 {
 
-    internal class SighIn : ISighIn
+    public class SighIn : ISighIn
     {
         ICustomerServise _icustomerServise;
         IWorkerService _workerService;

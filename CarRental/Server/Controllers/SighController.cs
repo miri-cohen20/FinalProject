@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Bl.Api;
 using Microsoft.AspNetCore.Identity;
 using Dal.models;
+using YourNamespace;
 
 namespace Server.Controllers
 {
@@ -40,9 +41,9 @@ namespace Server.Controllers
             return Ok(_sighIn.IsWorker(id));
         }
         [HttpPost("sighUpCustomer")]
-        public IActionResult sighUpCustomer([FromBody] User user)
+        public IActionResult sighUpCustomer([FromBody] CustomerRegistration custoner)
         {
-            if (_sighUp.CreateCustomer(user))
+            if (_sighUp.CreateCustomer(custoner.CreateCustomer()))
                 return BadRequest("Registration failed.");
             return Ok();
         }

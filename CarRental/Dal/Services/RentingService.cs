@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Dal.Services
 {
-    internal class RentingService : IPrice, ITime, IRenting, ICarService
+    public class RentingService : IPrice, ITime, IRenting, ICarService
     {
         public readonly dbClass _context;
         public RentingService(dbClass context)

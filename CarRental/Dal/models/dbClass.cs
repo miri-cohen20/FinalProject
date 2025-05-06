@@ -173,7 +173,9 @@ public partial class dbClass : DbContext
             entity.Property(e => e.Password)
                 .HasMaxLength(50)
                 .HasColumnName("password");
-            entity.Property(e => e.PhonNumber).HasColumnName("phonNumber");
+            entity.Property(e => e.PhonNumber)
+                .HasMaxLength(50)
+                .HasColumnName("phonNumber");
             entity.Property(e => e.Street)
                 .HasMaxLength(50)
                 .HasColumnName("street");

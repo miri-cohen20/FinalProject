@@ -13,7 +13,7 @@ using Dal.Services;
 
 namespace Bl.Services
 {
-    internal class BlRenting : IBlRenting
+    public class BlRenting : IBlRenting
     {
         IRenting _renting;
         IPrice _price;
@@ -311,6 +311,27 @@ namespace Bl.Services
             return UntilWhenCanACertainCarBeRented(_renting.GetAllRenting().Find(r => r.Id == idRenting).IdCar, _renting.GetAllRenting().Find(r => r.Id == idRenting).RentalTime);
 
         }
+        public void UpdateCustomer(Customer customerDto)
+        {
+            if (customerDto == null)
+                throw new ArgumentNullException();
 
+
+            if (!_customerServise.UpdateCustomer(customerDto))
+                throw new InvalidOperationException("the user with this id is not exsist");
+             
+        }
+
+        public List<Car> GetAllCars()
+        {
+            return _carService.GetAllCar();
+        }
+
+        public List<Renting> GetAllRenting()
+        {
+          return  _renting.GetAllRenting();
+        }
     }
+
 }
+

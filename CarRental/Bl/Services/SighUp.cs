@@ -35,7 +35,7 @@ namespace Bl.Services
         {
            
 
-            if (!_user.IsUserExist(user.Id))
+            if (_user.IsUserExist(user.IdNavigation.Id))
                 return false;
             _icustomerServise.AddNewCustomer(user);
             return true;

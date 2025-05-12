@@ -40,13 +40,48 @@ namespace Server.Controllers
         {
             return Ok(_sighIn.IsWorker(id));
         }
+
         [HttpPost("sighUpCustomer")]
-        public IActionResult sighUpCustomer([FromBody] CustomerRegistration custoner)
+        public IActionResult sighUpCustomer([FromBody] CustomerRegistration customer)
         {
-            if (_sighUp.CreateCustomer(custoner.CreateCustomer()))
-                return BadRequest("Registration failed.");
-            return Ok();
+            try
+            {
+                // Attempt to create the customer
+                var createdCustomer = customer.CreateCustomer();
+                bool registrationSuccessful = _sighUp.CreateCustomer(createdCustomer);
+
+                // Check if the registration was successful
+                if (registrationSuccessful)
+                {
+                    return Ok(createdCustomer); // Return the created customer object
+                }
+
+                return BadRequest("Registration failed. The user may already exist."); // Provide a specific message for failure
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Registration failed due to an error: {ex.Message}");
+            }
         }
+        //[HttpPost("sighUpCustomer")]
+        //public IActionResult sighUpCustomer([FromBody] CustomerRegistration custoner)
+        //{
+        //    if (_sighUp.CreateCustomer(custoner.CreateCustomer()))
+        //        return Ok();
+        //    return BadRequest("Registration failed.");
+
+        //}
+
+        //[HttpPost("sighUpCustomer")]
+        //public IActionResult sighUpCustomer([FromBody] CustomerRegistration customer)
+        //{
+        //    var result = _sighUp.CreateCustomer(customer.CreateCustomer());
+        //    if (result) // אם ההרשמה הצליחה
+        //    {
+        //        return Ok("Registration successful."); // החזר תגובה חיובית
+        //    }
+        //    return BadRequest("Registration failed."); // החזר הודעת שגיאה אם נכשלה
+        //}
 
         //[HttpPost("sighUpWorkerById")]
         //public IActionResult sighUpWorkerById([FromBody] User user)

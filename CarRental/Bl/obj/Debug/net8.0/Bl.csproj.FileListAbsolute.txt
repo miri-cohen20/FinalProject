@@ -10,7 +10,6 @@ H:\Project\CarRental\Bl\obj\Debug\net8.0\refint\Bl.dll
 H:\Project\CarRental\Bl\obj\Debug\net8.0\Bl.pdb
 H:\Project\CarRental\Bl\obj\Debug\net8.0\ref\Bl.dll
 H:\Project\CarRental\Bl\obj\Debug\net8.0\Bl.csproj.AssemblyReference.cache
-H:\Project\CarRental\Bl\obj\Debug\net8.0\Bl.sourcelink.json
 H:\Project\CarRental\Bl\bin\Debug\net8.0\Dal.dll
 H:\Project\CarRental\Bl\bin\Debug\net8.0\Dal.pdb
 H:\Project\CarRental\Bl\obj\Debug\net8.0\Bl.csproj.Up2Date

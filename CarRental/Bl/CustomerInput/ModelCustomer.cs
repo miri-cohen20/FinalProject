@@ -6,6 +6,7 @@ namespace YourNamespace // Use the appropriate namespace
     public class CustomerRegistration
     {
         // Properties required for registration
+        public int Id { get; set; }
         public string FirstName { get; set; } = string.Empty;
         public string? LastName { get; set; }
         public string PhoneNumber { get; set; } = null!;
@@ -20,6 +21,7 @@ namespace YourNamespace // Use the appropriate namespace
         {
             var user = new User
             {
+                Id=this.Id,
                 FirstName = this.FirstName,
                 LastName = this.LastName,
                 PhonNumber = this.PhoneNumber,
@@ -33,7 +35,7 @@ namespace YourNamespace // Use the appropriate namespace
             return new Customer
             {
                 IdNavigation = user,
-                Rentings = new List<Renting>() // Initialize Rentings as an empty list
+                Rentings = new List<Renting>() 
             };
         }
     }

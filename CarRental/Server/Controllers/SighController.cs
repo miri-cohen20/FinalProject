@@ -46,21 +46,38 @@ namespace Server.Controllers
         {
             try
             {
+                // Validate the input
+                if (customer == null)
+                {
+                    return BadRequest("Customer data is missing.");
+                }
+
                 // Attempt to create the customer
-                var createdCustomer = customer.CreateCustomer();
-                bool registrationSuccessful = _sighUp.CreateCustomer(createdCustomer);
+                Customer newCustomer = customer.CreateCustomer();
+                bool registrationSuccessful = _sighUp.CreateCustomer(newCustomer);
 
                 // Check if the registration was successful
                 if (registrationSuccessful)
                 {
-                    return Ok(createdCustomer); // Return the created customer object
+                    return Ok(new
+                    {
+                        Message = "Registration successful.",
+                        CustomerId = newCustomer.Id
+                    });
                 }
 
-                return BadRequest("Registration failed. The user may already exist."); // Provide a specific message for failure
+                // If registration failed due to user already existing
+                return BadRequest("Registration failed. The user may already exist.");
+            }
+            catch (ArgumentException ex)
+            {
+                // Handle specific argument exceptions
+                return BadRequest($"Invalid data: {ex.Message}");
             }
             catch (Exception ex)
             {
-                return BadRequest($"Registration failed due to an error: {ex.Message}");
+                // Catch other unexpected exceptions
+                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred: {ex.Message}");
             }
         }
         //[HttpPost("sighUpCustomer")]

@@ -15,3 +15,4 @@ H:\Project\CarRental\Bl\bin\Debug\net8.0\Dal.pdb
 H:\Project\CarRental\Bl\obj\Debug\net8.0\Bl.csproj.Up2Date
 H:\Project\CarRental\Bl\bin\Debug\net8.0\Bl.runtimeconfig.json
 H:\Project\CarRental\Bl\obj\Debug\net8.0\Bl.genruntimeconfig.cache
+H:\Project\CarRental\Bl\obj\Debug\net8.0\Bl.sourcelink.json

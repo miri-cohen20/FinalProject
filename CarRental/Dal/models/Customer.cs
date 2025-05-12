@@ -5,8 +5,12 @@ namespace Dal.models;
 
     public partial class Customer
     {
-        // המזהה של הלקוח
-//        public int Id { get; set; }
+        
+        public int Id
+         { get
+                 => Id;
+             set => Id = IdNavigation.Id;
+         }
 
 
         public virtual User IdNavigation { get; set; } = null!;

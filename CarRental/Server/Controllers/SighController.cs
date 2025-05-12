@@ -23,22 +23,40 @@ namespace Server.Controllers
             _sighIn = sighIn;
         }
 
-        [HttpGet("login")]
-        public IActionResult Login([FromBody]  string password, [FromQuery] int id)
+        [HttpPost("login")]
+        public IActionResult Login([FromBody] Tuple<int , string>login )
         {
-            if (_sighIn.Log(id, password) == null)
+            if (_sighIn.Log(login.Item1, login.Item2) == null)
                 return BadRequest("you not successed to login");
-            return Ok(_sighIn.Log(id, password));
+            return Ok(_sighIn.Log(login.Item1, login.Item2));
         }
         [HttpGet("isCostumer")]
-        public IActionResult isCustomer([FromBody] int id)
+        public IActionResult isCustomer([FromQuery] int id)
         {
-            return Ok(_sighIn.IsCustomer(id));
+            try
+            {
+                return Ok( _sighIn.IsCustomer(id));
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            
         }
         [HttpGet("isWorker")]
-        public IActionResult isWorker([FromBody] int id)
+        public IActionResult isWorker([FromQuery] int id)
         {
-            return Ok(_sighIn.IsWorker(id));
+            try
+            {
+               return Ok( _sighIn.IsWorker(id));
+                    
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            
         }
 
         [HttpPost("sighUpCustomer")]

@@ -1,0 +1,24 @@
+# Ignore Visual Studio temporary files
+
+[Dd]ebug/
+
+[Rr]elease/
+
+[Bb]in/
+
+[Oo]bj/
+
+
+# Ignore generated files
+
+*.dll
+
+*.pdb
+
+*.user
+
+*.suo
+
+*.cache
+
+*.log

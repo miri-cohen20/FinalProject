@@ -28,10 +28,14 @@ namespace Dal.Services
 
 
 
-            _context.Customers.Add(user);
-            _context.SaveChanges();
+    
+                _context.Customers.Add(user);
+                _context.SaveChanges();
+                return true;
 
-            return true;
+   
+
+    
         }
     
         
@@ -77,7 +81,7 @@ namespace Dal.Services
         {
             try
             {
-                return _context.Customers.ToList();
+                return _context.Customers.Include(c => c.IdNavigation).ToList();
             }
             catch (Exception ex)
             {
@@ -121,7 +125,10 @@ namespace Dal.Services
         {
             try
             {
-                return _context.Customers.Find(id);
+                return _context.Customers
+               .Include(c => c.IdNavigation)
+               .FirstOrDefault(c => c.Id == id);
+
             }
             catch (Exception ex)
             {
@@ -178,7 +185,7 @@ namespace Dal.Services
                     IdNavigation = new User
                     {
                         Password = user.Password,
-                        FirstName = user.Password,
+                        FirstName = user.FirstName,
                         LastName = user.LastName,
                         PhonNumber = user.PhonNumber,
                         Email = user.Email,
@@ -241,15 +248,18 @@ namespace Dal.Services
             }
         }
 
-        public bool UpdateCustomer(Customer customer)
+        public Customer UpdateCustomer(Customer customer, int id)
         {
-            Customer _customer = _context.Customers.Find(customer.Id);
+
+
+            // User _customer = GetUser(id);
+            Customer _customer = GetCustomerById(id);
             if (_customer == null)
             {
-                return false; // Customer not found
+                return null; 
             }
 
-
+            
             _customer.IdNavigation.LastName = customer.IdNavigation.LastName;
             _customer.IdNavigation.FirstName = customer.IdNavigation.FirstName;
             _customer.IdNavigation.PhonNumber = customer.IdNavigation.PhonNumber;
@@ -261,8 +271,10 @@ namespace Dal.Services
 
 
 
-            _context.SaveChanges(); // Save changes to the database
-            return true; // Return the updated DTO
+            _context.SaveChanges();
+            return _customer;
+            
+            //return _customer; 
         }
 
 

@@ -18,7 +18,7 @@ namespace Dal.Api
         bool AddNewCustomer(User user);
         Customer GetCustomerById(int id);
         List<Renting> GetAllRenting(int id);
-        bool UpdateCustomer(Customer customerDto);
+        Customer UpdateCustomer(Customer customerDto, int id);
 
     }
 }

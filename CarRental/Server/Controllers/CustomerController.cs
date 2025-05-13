@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Dal.models;
+using YourNamespace;
 
 namespace Server.Controllers
 {
@@ -18,7 +19,7 @@ namespace Server.Controllers
 
 
         [HttpGet("getHistoryCustomerRenting")]
-        public IActionResult GetHistoryCustomerRenting([FromBody] int idCustomer)
+        public IActionResult GetHistoryCustomerRenting([FromQuery] int idCustomer)
         {
             try
             {
@@ -33,13 +34,13 @@ namespace Server.Controllers
 
 
         [HttpPut("updateCustomer")]
-        public IActionResult UpdateCustomer( [FromBody] Customer customerDto)
+        public IActionResult UpdateCustomer([FromBody] CustomerRegistration customer, int id)
         {
 
             try
             {
-                _blRenting.UpdateCustomer(customerDto);
-                return Ok("the customer update successfuly");
+                
+                return Ok(CustomerRegistration.FromCustomer(_blRenting.UpdateCustomer(customer.CreateCustomer(), id)));
             }
             catch (ArgumentNullException ex)
             {
@@ -56,7 +57,7 @@ namespace Server.Controllers
         }
 
 
-        [HttpGet("getAllIdCar")]
+        [HttpGet("getAllCar")]
         public IActionResult GetAllIdCar()
         {
             try
@@ -84,12 +85,21 @@ namespace Server.Controllers
             }
         }
 
-        [HttpPut("renting")]
-        public IActionResult RentingCar([FromBody] int idCar, int idCustomer, DateTime fromTime, DateTime toTime)
+
+        public class CarRentalRequest
+        {
+            public int IdCar { get; set; }
+            public int IdCustomer { get; set; }
+            public DateTime FromTime { get; set; }
+            public DateTime ToTime { get; set; }
+        }
+
+        [HttpPost("renting")]
+        public IActionResult RentingCar([FromBody] CarRentalRequest carRentalRequest)
         {
             try
             {
-                if (_blRenting.RentingCar(idCar, idCustomer, fromTime, toTime))
+                if (_blRenting.RentingCar(carRentalRequest.IdCar, carRentalRequest.IdCustomer, carRentalRequest.FromTime, carRentalRequest.ToTime))
                     return Ok("the car rented successfuly");
                 else
                     return BadRequest("the car not rented");
@@ -109,7 +119,7 @@ namespace Server.Controllers
         }
 
         [HttpGet("getAllMyCurrentRentals")]
-        public IActionResult GetAllMyCurrentRentals([FromBody] int idCustomer)
+        public IActionResult GetAllMyCurrentRentals([FromQuery] int idCustomer)
         {
             try
             {

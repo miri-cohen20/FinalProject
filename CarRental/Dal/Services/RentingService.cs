@@ -40,8 +40,9 @@ namespace Dal.Services
 
         public int GetSeatsById(int id)
         {
-            var priceEntry = _context.Prices.Find(id);
-            return priceEntry?.Seats ?? -1;
+
+            var car = _context.Cars.Find(id);
+            return car?.Seats ?? -1;
         }
 
         public int GetTimeById(int id)
@@ -199,7 +200,7 @@ namespace Dal.Services
                 Renting newRenting = new Renting
                 {
                     Available = false,
-                    Id = idCar,
+                    IdCar = idCar,
                     IdCustomer = idCustomer,
                     RentalTime = rentalTime,
                     ReturnTime = returnTime,

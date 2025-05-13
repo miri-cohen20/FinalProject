@@ -24,11 +24,22 @@ namespace Server.Controllers
         }
 
         [HttpPost("login")]
-        public IActionResult Login([FromBody] Tuple<int , string>login )
+        public IActionResult Login([FromBody] Tuple<int, string> login)
         {
-            if (_sighIn.Log(login.Item1, login.Item2) == null)
-                return BadRequest("you not successed to login");
-            return Ok(_sighIn.Log(login.Item1, login.Item2));
+            try
+            {
+                var result = _sighIn.Log(login.Item1, login.Item2);
+                return Ok(result);
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                // לוג את השגיאה או טיפול בשגיאה לפי הצורך
+                return StatusCode(500, "Internal server error: " + ex.Message);
+            }
         }
         [HttpGet("isCostumer")]
         public IActionResult isCustomer([FromQuery] int id)

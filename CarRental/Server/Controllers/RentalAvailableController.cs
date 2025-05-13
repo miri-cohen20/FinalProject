@@ -62,7 +62,7 @@ namespace Server.Controllers
             }
         }
         [HttpPut("lackOfCleanliness")]
-        public IActionResult LackOfCleanliness([FromQuery] int idRenting, [FromQuery] string description)
+        public IActionResult LackOfCleanliness([FromQuery] int idRenting, [FromBody] string description)
         {
             try
             {
@@ -83,7 +83,7 @@ namespace Server.Controllers
             }
         }
         [HttpPut("improperty")]
-        public IActionResult Impropriety([FromQuery] int idRenting, [FromQuery] string description)
+        public IActionResult Impropriety([FromQuery] int idRenting, [FromBody] string description)
         {
             try
             {

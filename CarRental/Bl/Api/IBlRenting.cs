@@ -30,7 +30,7 @@ namespace Bl.Api
         void Improperty(int idRenting, string descreption);
         
         DateTime MaxRenting(DateTime inputDate);
-        void UpdateCustomer(Customer customerDto);
+        Customer UpdateCustomer(Customer customerDto, int id);
         DateTime? UntilWhenCanACertainCarBeRented(int idCar, DateTime from);
 
     }

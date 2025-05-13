@@ -5,15 +5,24 @@ namespace Dal.models;
 
     public partial class Customer
     {
-        
-        public int Id
-         { get
-                 => Id;
-             set => Id = IdNavigation.Id;
-         }
+
+    private int _id; // שדה פרטי לאחסון ה-ID
+
+    public int Id
+    {
+        get => _id;
+        set
+        {
+            _id = value;
+            if (IdNavigation != null)
+            {
+                IdNavigation.Id = value; // קבע את ה-ID של IdNavigation
+            }
+        }
+    }
 
 
-        public virtual User IdNavigation { get; set; } = null!;
+    public virtual User IdNavigation { get; set; } = null!;
 
         public virtual ICollection<Renting> Rentings { get; set; } = new List<Renting>();
 

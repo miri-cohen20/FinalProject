@@ -1,5 +1,6 @@
 ﻿using Dal.models;
 using System.Collections.Generic;
+using YourNamespace;
 
 namespace YourNamespace // Use the appropriate namespace
 {
@@ -19,24 +20,65 @@ namespace YourNamespace // Use the appropriate namespace
         // Method to create and return a Customer object
         public Customer CreateCustomer()
         {
-            var user = new User
-            {
-                Id=this.Id,
-                FirstName = this.FirstName,
-                LastName = this.LastName,
-                PhonNumber = this.PhoneNumber,
-                Email = this.Email,
-                City = this.City,
-                Street = this.Street,
-                BuildingNumber = this.BuildingNumber,
-                Password = this.Password,
-            };
 
             return new Customer
             {
-                IdNavigation = user,
+                Id = this.Id,
+                IdNavigation = new User
+                {
+                    Id = this.Id,
+                    FirstName = this.FirstName,
+                    LastName = this.LastName,
+                    PhonNumber = this.PhoneNumber,
+                    Email = this.Email,
+                    City = this.City,
+                    Street = this.Street,
+                    BuildingNumber = this.BuildingNumber,
+                    Password = this.Password,
+                },
                 Rentings = new List<Renting>() 
+            };
+        }
+        public static CustomerRegistration FromCustomer(Customer customer)
+        {
+            return new CustomerRegistration
+            {
+                Id = customer.Id,
+                FirstName = customer.IdNavigation.FirstName,
+                LastName = customer.IdNavigation.LastName,
+                PhoneNumber = customer.IdNavigation.PhonNumber,
+                Email = customer.IdNavigation.Email,
+                City = customer.IdNavigation.City,
+                Street = customer.IdNavigation.Street,
+                BuildingNumber = customer.IdNavigation.BuildingNumber,
+                Password = customer.IdNavigation.Password // אם יש צורך, ניתן לשקול לא להחזיר סיסמה
             };
         }
     }
 }
+
+
+
+
+
+//Customer customer = new Customer
+//{
+//    Id = 1, // או כל ID תקין אחר
+//    IdNavigation = new User
+//    {
+//        Id = 1,
+//        FirstName = "John",
+//        LastName = "Doe",
+//        PhonNumber = "123456789",
+//        Email = "john.doe@example.com",
+//        City = "New York",
+//        Street = "5th Avenue",
+//        BuildingNumber = 10,
+//        Password = "securepassword"
+//    },
+//    Rentings = new List<Renting>
+//    {
+//        new Renting { /* אתחול פרמטרים של Renting כאן */ },
+//        new Renting { /* אתחול נוסף אם יש צורך */ }
+//    }
+//};

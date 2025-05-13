@@ -311,14 +311,20 @@ namespace Bl.Services
             return UntilWhenCanACertainCarBeRented(_renting.GetAllRenting().Find(r => r.Id == idRenting).IdCar, _renting.GetAllRenting().Find(r => r.Id == idRenting).RentalTime);
 
         }
-        public void UpdateCustomer(Customer customerDto)
+        public Customer UpdateCustomer(Customer customerDto, int id)
         {
             if (customerDto == null)
                 throw new ArgumentNullException();
+            if(_customerServise.IsExist(id)!=true)
+            {
+                throw new InvalidOperationException("No client identified for editing");
+            }
 
-
-            if (!_customerServise.UpdateCustomer(customerDto))
+                
+            Customer user = _customerServise.UpdateCustomer(customerDto,id);
+            if (user == null)
                 throw new InvalidOperationException("the user with this id is not exsist");
+            return user;
              
         }
 

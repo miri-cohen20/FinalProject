@@ -16,7 +16,7 @@ namespace Server.Controllers
         }
 
         [HttpPut("extendRental")]
-    public IActionResult ExtendRental([FromBody] int idRenting, [FromQuery] int customerId, [FromQuery] DateTime untilTime)
+    public IActionResult ExtendRental([FromBody] int idRenting, [FromQuery] string customerId, [FromQuery] DateTime untilTime)
         {
 
             try
@@ -40,8 +40,31 @@ namespace Server.Controllers
             }
         }
 
+
+        [HttpPut("GetPriceForExtendRental")]
+        public IActionResult GetPriceForExtendRental([FromBody] int idRenting, [FromQuery] string customerId, [FromQuery] DateTime untilTime)
+        {
+
+            try
+            {
+                return Ok(_blRenting.PriceAddedRentalExtension(idRenting,customerId,untilTime));
+            }
+            catch (ArgumentNullException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "An unexpected error occurred: " + ex.Message);
+            }
+        }
+
         [HttpGet("getUntilCanRental")]
-        public IActionResult actionResult([FromQuery] int idCustomer, [FromQuery] int idRenting)
+        public IActionResult actionResult([FromQuery] string idCustomer, [FromQuery] int idRenting)
         {
             try
             {
@@ -104,7 +127,7 @@ namespace Server.Controllers
             }
         }
         [HttpPut("endRental")]
-        public IActionResult EndRental([FromQuery] int idCustomer, [FromQuery] int idRenting)
+        public IActionResult EndRental([FromQuery] string idCustomer, [FromQuery] int idRenting)
         {
             try
             {

@@ -4735,23 +4735,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\וובר תמר\\.nuget\\packages\\": {},
+    "C:\\Users\\כהן מרים\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\Project\\CarRental\\Dal\\Dal.csproj",
+      "projectUniqueName": "H:\\FinalProject\\CarRental\\Dal\\Dal.csproj",
       "projectName": "Dal",
-      "projectPath": "H:\\Project\\CarRental\\Dal\\Dal.csproj",
-      "packagesPath": "C:\\Users\\וובר תמר\\.nuget\\packages\\",
-      "outputPath": "H:\\Project\\CarRental\\Dal\\obj\\",
+      "projectPath": "H:\\FinalProject\\CarRental\\Dal\\Dal.csproj",
+      "packagesPath": "C:\\Users\\כהן מרים\\.nuget\\packages\\",
+      "outputPath": "H:\\FinalProject\\CarRental\\Dal\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\וובר תמר\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\כהן מרים\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

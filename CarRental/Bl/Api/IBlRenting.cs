@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Dal.models;
 
 namespace Bl.Api
@@ -11,27 +12,28 @@ namespace Bl.Api
     {
         List<Car> GetAllCars();
         List<Renting> GetAllRenting();
-        List<Renting> GetAllMyRenting(int id);
+        List<Renting> GetAllMyRenting(string id);
         List<Car> CarAvailableInCertainTime(DateTime fromTime);
         List<Car> CarAvailableInCertainTime(DateTime fromTime, DateTime toTime);
         List<Car> CarAvailableInCertainSeats(int numberOfSeats);
         List<Car> CarAvailableInCertainPlace(string city);
         List<Car> CarAvailableInCertainPlace(string city, string street);
-        void EndRental(int idCustomer, int idRenting);
+        void EndRental(string idCustomer, int idRenting);
 
-        bool RentingCar(int idCar, int idCustomer, DateTime fromTime, DateTime toTime);
-        double GetPriceForRenting(int idCar, DateTime fromTime, DateTime toTime);
+        bool RentingCar(string idCar, string idCustomer, DateTime fromTime, DateTime toTime);
+        double GetPriceForRenting(string idCar, DateTime fromTime, DateTime toTime);
 
-        List<Renting> GetAllMyCurrentRentals(int idCustomer);
-        DateTime? GetUntilCanRental(int idCustomer, int idRenting);
-        bool ExtendingRentalForACertainPeriodTime(int idRenting, int customerId, DateTime untilTime);
+        List<Renting> GetAllMyCurrentRentals(string idCustomer);
+        DateTime? GetUntilCanRental(string idCustomer, int idRenting);
+        bool ExtendingRentalForACertainPeriodTime(int idRenting, string customerId, DateTime untilTime);
+        double PriceAddedRentalExtension(int idRenting, string customerId, DateTime untilTime);
 
         void LackOfCleanliness(int idRenting, string descreption);
         void Improperty(int idRenting, string descreption);
         
         DateTime MaxRenting(DateTime inputDate);
-        Customer UpdateCustomer(Customer customerDto, int id);
-        DateTime? UntilWhenCanACertainCarBeRented(int idCar, DateTime from);
+        Customer UpdateCustomer(Customer customerDto, string id);
+        DateTime? UntilWhenCanACertainCarBeRented(string idCar, DateTime from);
 
     }
 }

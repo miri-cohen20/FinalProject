@@ -9,14 +9,14 @@ namespace Dal.Api
 {
     public interface IWorkerService
     {
-        List<int> GetAllIdWorker();
+        List<string> GetAllIdWorker();
         List<Worker> GetAllWorker();
-        bool WokerIsExist(int id);
+        bool WokerIsExist(string id);
         
-        bool AddNewWorker(int id, string firstName, string? lastName, string password, string phoneNumber, string? email, string city, string street, int? buildingNumber, int hoursMonth, int roleId);
+        bool AddNewWorker(string id, string firstName, string? lastName, string password, string phoneNumber, string? email, string city, string street, int? buildingNumber, int hoursMonth, int roleId);
         bool AddNewWorker(User user, int hoursMonth, int roleId);
-        Worker GetWorkerById(int id);
-        double GetWorkerPrice(int id);  
+        Worker GetWorkerById(string id);
+        double GetWorkerPrice(string id);  
         
 
 

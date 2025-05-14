@@ -24,7 +24,7 @@ namespace Server.Controllers
         }
 
         [HttpPost("login")]
-        public IActionResult Login([FromBody] Tuple<int, string> login)
+        public IActionResult Login([FromBody] Tuple<string, string> login)
         {
             try
             {
@@ -42,7 +42,7 @@ namespace Server.Controllers
             }
         }
         [HttpGet("isCostumer")]
-        public IActionResult isCustomer([FromQuery] int id)
+        public IActionResult isCustomer([FromQuery] string id)
         {
             try
             {
@@ -56,7 +56,7 @@ namespace Server.Controllers
             
         }
         [HttpGet("isWorker")]
-        public IActionResult isWorker([FromQuery] int id)
+        public IActionResult isWorker([FromQuery] string id)
         {
             try
             {

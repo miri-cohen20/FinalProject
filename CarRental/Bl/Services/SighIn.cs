@@ -20,17 +20,17 @@ namespace Bl.Services
             _workerService= workerService;
             _user= user;
         }
-        public bool IsCustomer(int id)
+        public bool IsCustomer(string id)
         {
            return _icustomerServise.IsExist(id);
         }
 
-        public bool IsWorker(int id)
+        public bool IsWorker(string id)
         {
             return _workerService.WokerIsExist(id);
         }
 
-        public User Log(int id, string password)
+        public User Log(string id, string password)
         {
             if(_user.GetUser(id)==null)
                 throw new ArgumentException($"User with id: {id} is not exist");

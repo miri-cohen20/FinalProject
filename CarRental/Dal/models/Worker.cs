@@ -5,7 +5,7 @@ namespace Dal.models;
 
 public partial class Worker
 {
-    public int Id { get; set; }
+    public string Id { get; set; } = null!;
 
     public int HoursMonth { get; set; }
 

@@ -19,7 +19,7 @@ namespace Server.Controllers
 
 
         [HttpGet("getHistoryCustomerRenting")]
-        public IActionResult GetHistoryCustomerRenting([FromQuery] int idCustomer)
+        public IActionResult GetHistoryCustomerRenting([FromQuery] string idCustomer)
         {
             try
             {
@@ -34,7 +34,7 @@ namespace Server.Controllers
 
 
         [HttpPut("updateCustomer")]
-        public IActionResult UpdateCustomer([FromBody] CustomerRegistration customer, int id)
+        public IActionResult UpdateCustomer([FromBody] CustomerRegistration customer, string id)
         {
 
             try
@@ -88,8 +88,8 @@ namespace Server.Controllers
 
         public class CarRentalRequest
         {
-            public int IdCar { get; set; }
-            public int IdCustomer { get; set; }
+            public string IdCar { get; set; }
+            public string IdCustomer { get; set; }
             public DateTime FromTime { get; set; }
             public DateTime ToTime { get; set; }
         }
@@ -119,7 +119,7 @@ namespace Server.Controllers
         }
 
         [HttpGet("getAllMyCurrentRentals")]
-        public IActionResult GetAllMyCurrentRentals([FromQuery] int idCustomer)
+        public IActionResult GetAllMyCurrentRentals([FromQuery] string idCustomer)
         {
             try
             {

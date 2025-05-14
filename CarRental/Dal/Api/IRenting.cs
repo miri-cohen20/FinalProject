@@ -1,4 +1,5 @@
-﻿using Dal.models;
+﻿using Dal.Api;
+using Dal.models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,12 +12,13 @@ namespace Dal.Api
     {
 
         List<Renting> GetAllRenting();
-        
-        bool UpdateReturnTimeRenting(int idRenting, DateTime returnTime);
-        bool AddRenting( int idCar, int idCustomer, DateTime rentalTime, DateTime returnTime, double price);
-
+        void UpdateEndRental( int idRenting);
+        bool UpdateReturnTimeRenting(int idRenting, DateTime returnTime, double price);
+        bool AddRenting( string idCar, string idCustomer, DateTime rentalTime, DateTime returnTime, double price);
     }
 }
+
+
 
 
 //public int Id { get; set; }

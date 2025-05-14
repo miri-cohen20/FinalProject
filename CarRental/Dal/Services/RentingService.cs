@@ -38,7 +38,7 @@ namespace Dal.Services
             return priceEntry?.PriceForHour ?? 0;
         }
 
-        public int GetSeatsById(int id)
+        public int GetSeatsById(string id)
         {
 
             var car = _context.Cars.Find(id);
@@ -129,42 +129,42 @@ namespace Dal.Services
             }
         }
 
-        public Car GetCar(int id)
+        public Car GetCar(string id)
         {
             return _context.Cars.Find(id);
         }
 
-        public int GetCarSeats(int id)
+        public int GetCarSeats(string id)
         {
             var car = _context.Cars.Find(id);
             return car?.Seats ?? -1;
         }
 
-        public bool IsClean(int id)
+        public bool IsClean(string id)
         {
             var car = _context.Cars.Find(id);
             return car?.CleanStatus ?? false;
         }
 
-        public DateTime GetLastCleaning(int id)
+        public DateTime GetLastCleaning(string id)
         {
             var car = _context.Cars.Find(id);
             return car?.FinalCleaning ?? DateTime.MinValue;
         }
 
-        public bool IsProper(int id)
+        public bool IsProper(string id)
         {
             var car = _context.Cars.Find(id);
             return car?.ProperStatus ?? false;
         }
 
-        public DateTime GetLastCorrection(int id)
+        public DateTime GetLastCorrection(string id)
         {
             var car = _context.Cars.Find(id);
             return car?.LastCorrection ?? DateTime.MinValue;
         }
 
-        public ICollection<Renting> rentings(int id)
+        public ICollection<Renting> rentings(string id)
         {
             var car = _context.Cars.Include(c => c.Rentings).FirstOrDefault(c => c.Id == id);
             return car?.Rentings ?? new List<Renting>();
@@ -175,24 +175,25 @@ namespace Dal.Services
             return _context.Cars.ToList();
         }
 
-        public List<int> GetAllIdCar()
+        public List<string> GetAllIdCar()
         {
             return _context.Cars.Select(c => c.Id).ToList();
         }
 
-        public bool UpdateReturnTimeRenting(int idRenting, DateTime returnTime)
+        public bool UpdateReturnTimeRenting(int idRenting, DateTime returnTime, double price)
         {
             var renting = _context.Rentings.FirstOrDefault(r => r.Id == idRenting);
             if (renting == null)
                 throw new ArgumentException("Renting with the specified ID does not exist.");
 
             renting.ReturnTime = returnTime; 
+            renting.Price = price;
 
             _context.SaveChanges(); 
             return true; 
         }
 
-        public bool AddRenting(int idCar, int idCustomer, DateTime rentalTime, DateTime returnTime, double price)
+        public bool AddRenting(string idCar, string idCustomer, DateTime rentalTime, DateTime returnTime, double price)
         {
 
             try
@@ -219,6 +220,40 @@ namespace Dal.Services
                 return false;
             }
         }
+
+        public void ComplaintOfCleanliness(int idRenting, string descreption)
+        {
+            Renting renting = GetAllRenting().FirstOrDefault(r => r.Id == idRenting);
+            Car car = GetAllCar().Find(c => c.Id == renting.IdCar);
+            car.CleanStatus = false;
+            car.DescriptionCleaning = descreption;
+            _context.SaveChanges();
+        }
+        public void ComplaintOfImproperty(int idRenting, string descreption)
+        {
+            Renting renting = GetAllRenting().FirstOrDefault(r => r.Id == idRenting);
+            Car car = GetAllCar().Find(c => c.Id == renting.IdCar);
+            car.ProperStatus = false;
+            car.DescriptionProper = descreption;
+            _context.SaveChanges();
+        }
+
+        public void UpdateEndRental(int idRenting)
+        {
+            Renting r = GetAllRenting().Find(r => r.Id == idRenting);          
+            DateTime now = DateTime.Now;
+            r.ReturnTime = now;
+            r.Available=true;
+            _context.SaveChanges();
+
+        }
+
+        
+           
+
+
+        
+            
     }
 }
 

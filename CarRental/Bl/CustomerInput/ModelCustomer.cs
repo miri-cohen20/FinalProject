@@ -7,7 +7,7 @@ namespace YourNamespace // Use the appropriate namespace
     public class CustomerRegistration
     {
         // Properties required for registration
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string FirstName { get; set; } = string.Empty;
         public string? LastName { get; set; }
         public string PhoneNumber { get; set; } = null!;

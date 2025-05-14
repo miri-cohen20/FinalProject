@@ -12,7 +12,7 @@ namespace Dal.Api
         double GetPriceForHour(int seats, int time);
         int GetIdPrice(int seats, int time);
         double GetPriceForHourById(int id);
-        int GetSeatsById(int id);
+        int GetSeatsById(string id);
         int GetTimeById(int id);
         List<Price> GetAllPrices();
         List<int> GetAllIdPrice();

@@ -9,9 +9,9 @@ namespace Dal.Api
 {
     public interface IUser
     {
-        User GetUser(int id);
+        User GetUser(string id);
         List<User> GetAllUsers();
-        bool IsUserExist(int id);
+        bool IsUserExist(string id);
 
 
 

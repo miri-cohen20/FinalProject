@@ -21,8 +21,6 @@ public partial class dbClass : DbContext
 
     public virtual DbSet<Price> Prices { get; set; }
 
-    public virtual DbSet<RentalOrder> RentalOrders { get; set; }
-
     public virtual DbSet<Renting> Rentings { get; set; }
 
     public virtual DbSet<Role> Roles { get; set; }
@@ -37,17 +35,17 @@ public partial class dbClass : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename='H:\\Project\\CarRental\\Dal\\Data\\database.mdf';Integrated Security=True;Connect Timeout=30;Encrypt=True;Integrated Security=True;Connect Timeout=30");
+        => optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename='H:\\FinalProject\\CarRental\\Dal\\Data\\database.mdf';Integrated Security=True;Connect Timeout=30;Encrypt=True;Integrated Security=True;Connect Timeout=30");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Car>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__tmp_ms_x__3214EC0792DAC60F");
+            entity.HasKey(e => e.Id).HasName("PK__tmp_ms_x__3214EC079B5127FB");
 
             entity.ToTable("Car");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
+            entity.Property(e => e.Id).HasMaxLength(50);
             entity.Property(e => e.City)
                 .HasMaxLength(50)
                 .HasColumnName("city");
@@ -69,9 +67,9 @@ public partial class dbClass : DbContext
 
         modelBuilder.Entity<Customer>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Customer__6037852F88FA4804");
+            entity.HasKey(e => e.Id).HasName("PK__tmp_ms_x__3214EC0774875EA2");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
+            entity.Property(e => e.Id).HasMaxLength(50);
 
             entity.HasOne(d => d.IdNavigation).WithOne(p => p.Customer)
                 .HasForeignKey<Customer>(d => d.Id)
@@ -89,19 +87,6 @@ public partial class dbClass : DbContext
             entity.Property(e => e.Time).HasColumnName("time");
         });
 
-        modelBuilder.Entity<RentalOrder>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PK__RentalOr__3214EC07AFC6C64C");
-
-            entity.ToTable("RentalOrder");
-
-            entity.Property(e => e.Id).ValueGeneratedNever();
-            entity.Property(e => e.Car).HasColumnName("car");
-            entity.Property(e => e.Date).HasColumnName("date");
-            entity.Property(e => e.Status).HasColumnName("status");
-            entity.Property(e => e.TimeOfDay).HasColumnName("timeOfDay");
-        });
-
         modelBuilder.Entity<Renting>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__tmp_ms_x__3214EC07A6B650C1");
@@ -109,6 +94,8 @@ public partial class dbClass : DbContext
             entity.ToTable("Renting");
 
             entity.Property(e => e.Available).HasColumnName("available");
+            entity.Property(e => e.IdCar).HasMaxLength(50);
+            entity.Property(e => e.IdCustomer).HasMaxLength(50);
             entity.Property(e => e.Price).HasColumnName("price");
             entity.Property(e => e.RentalTime).HasColumnType("datetime");
             entity.Property(e => e.ReturnTime).HasColumnType("datetime");
@@ -152,11 +139,11 @@ public partial class dbClass : DbContext
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__User__3214EC070F5D6544");
+            entity.HasKey(e => e.Id).HasName("PK__tmp_ms_x__3214EC074DD69D3F");
 
             entity.ToTable("User");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
+            entity.Property(e => e.Id).HasMaxLength(50);
             entity.Property(e => e.BuildingNumber).HasColumnName("buildingNumber");
             entity.Property(e => e.City)
                 .HasMaxLength(50)
@@ -183,9 +170,9 @@ public partial class dbClass : DbContext
 
         modelBuilder.Entity<Worker>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__tmp_ms_x__3214EC071E1A4C2B");
+            entity.HasKey(e => e.Id).HasName("PK__tmp_ms_x__3214EC07D0D6F053");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
+            entity.Property(e => e.Id).HasMaxLength(50);
             entity.Property(e => e.Price).HasColumnName("price");
 
             entity.HasOne(d => d.IdNavigation).WithOne(p => p.Worker)

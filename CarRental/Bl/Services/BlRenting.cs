@@ -76,8 +76,12 @@ namespace Bl.Services
         }
 
 
-        public List<Renting> GetAllMyCurrentRentals(int idCustomer)
+        public List<Renting> GetAllMyCurrentRentals(string idCustomer)
         {
+            if (!_customerServise.IsExist(idCustomer))
+            {
+                throw new ArgumentException("Customer with the specified ID does not exist.");
+            }
             DateTime currentTime = DateTime.Now;
 
             var currentRentals = _renting.GetAllRenting()
@@ -87,33 +91,75 @@ namespace Bl.Services
             return currentRentals;
         }
 
-        public List<Renting> GetAllMyRenting(int id)
+        public List<Renting> GetAllMyRenting(string id)
         {
+            if(!_customerServise.IsExist(id))
+            {
+                throw new ArgumentException("Customer with the specified ID does not exist.");
+            }
             return _renting.GetAllRenting()
                 .Where(r => r.IdCustomer == id)
                 .ToList();
 
         }
 
-
-        public bool ExtendingRentalForACertainPeriodTime(int idRenting, int customerId, DateTime untilTime)
+        public double PriceAddedRentalExtension(int idRenting, string customerId, DateTime untilTime)
         {
-            DateTime currentTime = DateTime.Now;
+         
+            if (!IsRentingActiveByCustomer(idRenting, customerId))
+                throw new InvalidOperationException("The customer is not renting this vehicle now.");
+
 
             // בודק אם ההשכרה קיימת והלקוח הוא זה שמשכיר אותה
             var rental = _renting.GetAllRenting()
                 .FirstOrDefault(r => r.Id == idRenting && r.IdCustomer == customerId);
 
-            if (rental == null || rental.RentalTime < currentTime)
+            if (rental == null)
             {
-                if (rental == null)
-                    // Console.WriteLine("is not exist a rental ");
-                    return false;
+
+                throw new ArgumentException($"This rental was not found for the customer with the same number: {customerId}");
+
             }
 
-            if (CarAvailableInCertainTime(rental.ReturnTime, untilTime).Find(c => c.Id == rental.Id) != null)
+            if (CarAvailableInCertainTime(rental.ReturnTime, untilTime).Find(c => c.Id == rental.IdCar) != null)
             {
-                return _renting.UpdateReturnTimeRenting(idRenting, untilTime);
+               return GetPriceForRenting(rental.IdCar, rental.RentalTime, untilTime) - rental.Price;
+                
+
+            }
+            throw new InvalidOperationException("The rental cannot be extended until the requested time.");
+
+
+
+        }
+
+
+        public bool ExtendingRentalForACertainPeriodTime(int idRenting, string customerId, DateTime untilTime)
+        {
+            
+            if(!_customerServise.IsExist(customerId))
+            {
+                throw new ArgumentException("Customer with the specified ID does not exist.");
+            }
+            if(!IsRentingActiveByCustomer(idRenting, customerId))
+                throw new InvalidOperationException("The customer is not renting this vehicle now.");
+            
+
+            // בודק אם ההשכרה קיימת והלקוח הוא זה שמשכיר אותה
+            var rental = _renting.GetAllRenting()
+                .FirstOrDefault(r => r.Id == idRenting && r.IdCustomer == customerId);
+
+            if (rental == null )
+            {
+                
+                    throw new ArgumentException($"This rental was not found for the customer with the same number: {customerId}");
+
+            }
+
+            if (CarAvailableInCertainTime(rental.ReturnTime, untilTime).Find(c => c.Id == rental.IdCar) != null)
+            {
+                double price = GetPriceForRenting(rental.IdCar, rental.RentalTime, untilTime);
+                return _renting.UpdateReturnTimeRenting(idRenting, untilTime,  price);
 
             }
             return false;
@@ -138,7 +184,7 @@ namespace Bl.Services
 
 
 
-        public double GetPriceForRenting(int idCar, DateTime fromTime, DateTime toTime)
+        public double GetPriceForRenting(string idCar, DateTime fromTime, DateTime toTime)
         {
             double totalHours = (toTime - fromTime).TotalHours;
 
@@ -167,7 +213,7 @@ namespace Bl.Services
             return priceForHours * totalHours;
         }
 
-        public DateTime? UntilWhenCanACertainCarBeRented(int idCar, DateTime from)
+        public DateTime? UntilWhenCanACertainCarBeRented(string idCar, DateTime from)
         {
             var carExists = _carService.GetAllCar().Any(car => car.Id == idCar);
             if (!carExists)
@@ -177,16 +223,21 @@ namespace Bl.Services
 
             var conflictingRentals = _renting.GetAllRenting()
                 .Where(r => r.IdCar == idCar &&
-                r.RentalTime < from &&
-                r.ReturnTime > from)
+                r.RentalTime >= from)
                 .ToList();
+            
+
             if (conflictingRentals.Count == 0)
             {
 
                 return MaxRenting(from);
             }
-
-            return null;
+            DateTime lastRentalTime = conflictingRentals.Min(r => r.RentalTime);
+            if (lastRentalTime>MaxRenting(from))
+            {
+                return MaxRenting(from);
+            }
+            else return lastRentalTime;    
         }
 
 
@@ -197,30 +248,31 @@ namespace Bl.Services
 
 
 
+
+
         public void Improperty(int idRenting, string descreption)
         {
+
             var renting = _renting.GetAllRenting().FirstOrDefault(r => r.Id == idRenting);
             if (renting == null)
             {
                 throw new ArgumentException("Renting with the specified ID does not exist.");
             }
 
-            // בדוק אם ההשכרה פעילה או הסתיימה לפני רבע שעה
-            DateTime now = DateTime.Now;
-            TimeSpan timeSinceEnd = now - renting.ReturnTime;
 
-            if (IsRentingActive(idRenting) || timeSinceEnd.TotalMinutes <= 15)
+
+
+            if (IsRentingActive(idRenting))
             {
-                Car car = _carService.GetAllCar().Find(c => c.Id == renting.IdCar);
-                car.ProperStatus = false;
-                car.DescriptionProper = descreption;
+
+
+                _carService.ComplaintOfImproperty(idRenting, descreption);
 
             }
             else
             {
-                throw new InvalidOperationException("The renting is either inactive or has ended more than 15 minutes ago.");
+                throw new InvalidOperationException("The renting is either inactive or has ended.");
             }
-
         }
 
         public void LackOfCleanliness(int idRenting, string descreption)
@@ -232,33 +284,27 @@ namespace Bl.Services
                 throw new ArgumentException("Renting with the specified ID does not exist.");
             }
 
-            // בדוק אם ההשכרה פעילה או הסתיימה לפני רבע שעה
-            DateTime now = DateTime.Now;
-            TimeSpan timeSinceEnd = now - renting.ReturnTime;
+
             
 
-            if (IsRentingActive(idRenting) || timeSinceEnd.TotalMinutes <= 15)
+            if (IsRentingActive(idRenting))
             {
-                Car car = _carService.GetAllCar().Find(c => c.Id == renting.IdCar);
-                car.CleanStatus = false;
-                car.DescriptionCleaning = descreption;
 
+               
+                _carService.ComplaintOfCleanliness(idRenting, descreption);
+               
             }
             else
             {
-                throw new InvalidOperationException("The renting is either inactive or has ended more than 15 minutes ago.");
+                throw new InvalidOperationException("The renting is either inactive or has ended.");
             }
         }
 
-        public void EndRental(int idCustomer, int idRenting)
+        public void EndRental(string idCustomer, int idRenting)
         {
-            if (!_customerServise.GetAllCustomer().Any(c => c.Id == idCustomer))
-                throw new ArgumentException("Customer with the specified ID does not exist.");
-            if (!_renting.GetAllRenting().Any(_renting => _renting.Id == idRenting))
-                throw new ArgumentException("Renting with the specified ID does not exist.");
-            Renting r = _renting.GetAllRenting().Find(_renting => _renting.Id == idRenting);
-            r.Available = true;
-            r.ReturnTime = DateTime.Now;
+            if(!IsRentingActiveByCustomer(idRenting,idCustomer))
+                throw new InvalidOperationException("The customer is not renting this vehicle now.");
+            _renting.UpdateEndRental(idRenting);  
         }
         public bool IsRentingActive(int idRenting)
         {
@@ -271,8 +317,22 @@ namespace Bl.Services
             return r.RentalTime <= now && (r.ReturnTime == null || r.ReturnTime > now);
         }
 
+        public bool IsRentingActiveByCustomer(int idRenting, string idCustomer)
+        {
+            if (!_customerServise.GetAllCustomer().Any(c => c.Id == idCustomer))
+                throw new ArgumentException("Customer with the specified ID does not exist.");
+            Renting r = _renting.GetAllRenting().Find(r => r.Id == idRenting);
+            if (r == null)
+                throw new ArgumentException("Renting with the specified ID does not exist.");
+            if (r.IdCustomer != idCustomer)
+                throw new ArgumentException("The customer is not renting this renting.");
+            DateTime now = DateTime.Now;
+            return r.RentalTime <= now && (r.ReturnTime == null || r.ReturnTime > now);
+        }
 
-        public bool RentingCar(int idCar, int idCustomer, DateTime fromTime, DateTime toTime)
+
+
+        public bool RentingCar(string idCar, string idCustomer, DateTime fromTime, DateTime toTime)
         {
             // בדוק אם קיים רכב עם ה-ID הנתון
             var car = _carService.GetAllCar().FirstOrDefault(c => c.Id == idCar);
@@ -295,6 +355,10 @@ namespace Bl.Services
             {
                 throw new InvalidOperationException("The car is already rented during the specified time.");
             }
+            if (fromTime.AddMinutes(5) < DateTime.Now)
+            {
+                throw new InvalidOperationException("Incorrect time");
+            }
 
 
             _renting.AddRenting(idCar, idCustomer, fromTime, toTime, GetPriceForRenting(idCar, fromTime, toTime));
@@ -302,16 +366,16 @@ namespace Bl.Services
             return true;
         }
 
-        public DateTime? GetUntilCanRental(int idCustomer, int idRenting)
+        public DateTime? GetUntilCanRental(string idCustomer, int idRenting)
         {
             if (!_customerServise.GetAllCustomer().Any(c => c.Id == idCustomer))
                 throw new ArgumentException("Customer with the specified ID does not exist.");
             if (!_renting.GetAllRenting().Any(_renting => _renting.Id == idRenting))
                 throw new ArgumentException("Renting with the specified ID does not exist.");
-            return UntilWhenCanACertainCarBeRented(_renting.GetAllRenting().Find(r => r.Id == idRenting).IdCar, _renting.GetAllRenting().Find(r => r.Id == idRenting).RentalTime);
+            return UntilWhenCanACertainCarBeRented(_renting.GetAllRenting().Find(r => r.Id == idRenting).IdCar, _renting.GetAllRenting().Find(r => r.Id == idRenting).ReturnTime);
 
         }
-        public Customer UpdateCustomer(Customer customerDto, int id)
+        public Customer UpdateCustomer(Customer customerDto, string id)
         {
             if (customerDto == null)
                 throw new ArgumentNullException();
@@ -337,6 +401,8 @@ namespace Bl.Services
         {
           return  _renting.GetAllRenting();
         }
+
+
     }
 
 }

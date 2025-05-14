@@ -7,9 +7,9 @@ public partial class Renting
 {
     public int Id { get; set; }
 
-    public int IdCar { get; set; }
+    public string IdCar { get; set; } = null!;
 
-    public int IdCustomer { get; set; }
+    public string IdCustomer { get; set; } = null!;
 
     public DateTime RentalTime { get; set; }
 

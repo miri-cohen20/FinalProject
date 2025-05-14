@@ -39,7 +39,7 @@ namespace Dal.Services
         }
     
         
-        public bool AddNewCustomer(int id, string firstName, string password, string? lastName, string phoneNumber, string? email, string city, string street, int? buildingNumber)
+        public bool AddNewCustomer(string id, string firstName, string password, string? lastName, string phoneNumber, string? email, string city, string street, int? buildingNumber)
         {
 
             if (IsExist(id))
@@ -90,7 +90,7 @@ namespace Dal.Services
             }
         }
 
-        public List<int> GetAllIdCustomer()
+        public List<string> GetAllIdCustomer()
         {
             try
             {
@@ -99,12 +99,12 @@ namespace Dal.Services
             catch (Exception ex)
             {
                 Console.WriteLine($"Error retrieving customer IDs: {ex.Message}");
-                return new List<int>();
+                return new List<string>();
             }
         }
 
 
-        public List<Renting> GetAllRenting(int id)
+        public List<Renting> GetAllRenting(string id)
         {
 
             try
@@ -121,7 +121,7 @@ namespace Dal.Services
                 return new List<Renting>();
             }
         }
-        public Customer GetCustomerById(int id)
+        public Customer GetCustomerById(string id)
         {
             try
             {
@@ -137,12 +137,12 @@ namespace Dal.Services
             }
         }
 
-        public bool IsExist(int id)
+        public bool IsExist(string id)
         {
             return _context.Customers.Any(c => c.Id == id);
         }
 
-        public List<int> GetAllIdWorker()
+        public List<string> GetAllIdWorker()
         {
             try
             {
@@ -151,7 +151,7 @@ namespace Dal.Services
             catch (Exception ex)
             {
                 Console.WriteLine($"Error retrieving Worker IDs: {ex.Message}");
-                return new List<int>();
+                return new List<string>();
             }
         }
 
@@ -168,7 +168,7 @@ namespace Dal.Services
             }
         }
 
-        public bool WokerIsExist(int id)
+        public bool WokerIsExist(string id)
         {
             return _context.Workers.Any(c => c.Id == id);
         }
@@ -248,7 +248,7 @@ namespace Dal.Services
             }
         }
 
-        public Customer UpdateCustomer(Customer customer, int id)
+        public Customer UpdateCustomer(Customer customer, string id)
         {
 
 
@@ -279,7 +279,7 @@ namespace Dal.Services
 
 
 
-    public bool AddNewWorker(int id, string firstName, string? lastName, string password, string phoneNumber, string? email, string city, string street, int? buildingNumber, int hoursMonth, int roleId)
+    public bool AddNewWorker(string id, string firstName, string? lastName, string password, string phoneNumber, string? email, string city, string street, int? buildingNumber, int hoursMonth, int roleId)
     {
 
         try
@@ -316,7 +316,7 @@ namespace Dal.Services
 
     }
 
-    public Worker GetWorkerById(int id)
+    public Worker GetWorkerById(string id)
     {
         try
         {
@@ -329,7 +329,7 @@ namespace Dal.Services
         }
     }
 
-    public double GetWorkerPrice(int id)
+    public double GetWorkerPrice(string id)
     {
         try
         {
@@ -352,7 +352,7 @@ namespace Dal.Services
         }
     }
 
-    public User GetUser(int id)
+    public User GetUser(string id)
     {
         return _context.Users.Find(id);
     }
@@ -412,7 +412,7 @@ namespace Dal.Services
         }
     }
 
-    public bool IsUserExist(int id)
+    public bool IsUserExist(string id)
     {
         return _context.Users.Any(u => u.Id == id);
     }

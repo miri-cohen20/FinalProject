@@ -28,6 +28,7 @@ builder.Services.AddScoped<ISighIn, SighIn>();
 builder.Services.AddScoped<ISighUp, SighUp>();
 
 
+
 // הוספת DbContext
 builder.Services.AddDbContext<dbClass>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));

@@ -22,7 +22,8 @@ namespace Bl.Services
             _user = user;
         }
 
-        public bool CreateCustomer(int id, string firstName,string password, string phoneNumber, string city, string street, int buildingNumber = 0, string lastName = null, string email = null)
+
+        public bool CreateCustomer(string id, string firstName,string password, string phoneNumber, string city, string street, int buildingNumber = 0, string lastName = null, string email = null)
         {
            if(!_user.IsUserExist(id))
                 return false;
@@ -41,12 +42,9 @@ namespace Bl.Services
             return true;
         }
 
-        public bool CreateCustomer(int id, string firstName, string password, int phoneNumber, string city, string street, int buildingNumber = 0, string lastName = null, string email = null)
-        {
-            throw new NotImplementedException();
-        }
 
-        public bool CreateWorker(int id, string firstName,string password, string phoneNumber, string city, string street, int hoursMonth, int roleId, int buildingNumber = 0, string lastName = null, string email = null)
+
+        public bool CreateWorker(string id, string firstName,string password, string phoneNumber, string city, string street, int hoursMonth, int roleId, int buildingNumber = 0, string lastName = null, string email = null)
         {
             if(_workerService.WokerIsExist(id))
                 return false;
@@ -56,7 +54,7 @@ namespace Bl.Services
             return true;
         }
 
-        public bool CreateWorker(int id, int hoursMonth, int roleId)
+        public bool CreateWorker(string id, int hoursMonth, int roleId)
         {
             if (_workerService.WokerIsExist(id))
                 return false;

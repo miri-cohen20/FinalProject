@@ -9,16 +9,16 @@ namespace Dal.Api
 {
     public interface ICustomerServise
     {
-        List<int> GetAllIdCustomer();
+        List<string> GetAllIdCustomer();
         List<Customer> GetAllCustomer();
-        bool IsExist(int id);
-        bool AddNewCustomer(int id, string firstName, string password, string? lastName, string phoneNumber, string? email, string city, string street, int? buildingNumber);
+        bool IsExist(string id);
+        bool AddNewCustomer(string id, string firstName, string password, string? lastName, string phoneNumber, string? email, string city, string street, int? buildingNumber);
 
         bool AddNewCustomer(Customer user);
         bool AddNewCustomer(User user);
-        Customer GetCustomerById(int id);
-        List<Renting> GetAllRenting(int id);
-        Customer UpdateCustomer(Customer customerDto, int id);
+        Customer GetCustomerById(string id);
+        List<Renting> GetAllRenting(string id);
+        Customer UpdateCustomer(Customer customerDto, string id);
 
     }
 }

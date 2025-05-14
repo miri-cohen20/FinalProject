@@ -11,9 +11,9 @@ namespace Bl.Api
     public interface ISighIn
     {
 
-        User Log(int id, string password);
-        bool IsCustomer(int id);
-        bool IsWorker(int id);
+        User Log(string id, string password);
+        bool IsCustomer(string id);
+        bool IsWorker(string id);
 
     }
 }

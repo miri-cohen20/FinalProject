@@ -1,1 +1,0 @@
- Scaffold-DbContext "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='H:\FinalProject\CarRental\Dal\Data\database.mdf';Integrated Security=True;Connect Timeout=30;Encrypt=True;Integrated Security=True;Connect Timeout=30" Microsoft.EntityFrameworkCore.SqlServer -outputdir models -context dbClass -f

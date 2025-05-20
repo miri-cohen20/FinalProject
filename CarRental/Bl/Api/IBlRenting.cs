@@ -34,6 +34,7 @@ namespace Bl.Api
         DateTime MaxRenting(DateTime inputDate);
         Customer UpdateCustomer(Customer customerDto, string id);
         DateTime? UntilWhenCanACertainCarBeRented(string idCar, DateTime from);
+        List<Renting> GetActiveAndFutureRentalsByCustomer(string idCustomer);
 
     }
 }

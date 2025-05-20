@@ -141,7 +141,7 @@ namespace Bl.Services
             {
                 throw new ArgumentException("Customer with the specified ID does not exist.");
             }
-            if(!IsRentingActiveByCustomer(idRenting, customerId))
+            if(!IsRentingActiveOrFuture( customerId, idRenting))
                 throw new InvalidOperationException("The customer is not renting this vehicle now.");
             
 
@@ -330,6 +330,21 @@ namespace Bl.Services
             return r.RentalTime <= now && (r.ReturnTime == null || r.ReturnTime > now);
         }
 
+        public bool IsRentingActiveOrFuture(string idCustomer, int idRenting)
+        {
+            if (!_customerServise.GetAllCustomer().Any(c => c.Id == idCustomer))
+                throw new ArgumentException("Customer with the specified ID does not exist.");
+
+            Renting r = _renting.GetAllRenting().Find(r => r.Id == idRenting);
+            if (r == null)
+                throw new ArgumentException("Renting with the specified ID does not exist.");
+            if (r.IdCustomer != idCustomer)
+                throw new ArgumentException("The customer is not associated with this renting.");
+
+            DateTime now = DateTime.Now;
+            return (r.RentalTime <= now && (r.ReturnTime == null || r.ReturnTime > now)) || (r.RentalTime > now);
+        }
+
 
 
         public bool RentingCar(string idCar, string idCustomer, DateTime fromTime, DateTime toTime)
@@ -400,6 +415,23 @@ namespace Bl.Services
         public List<Renting> GetAllRenting()
         {
           return  _renting.GetAllRenting();
+        }
+
+
+        public List<Renting> GetActiveAndFutureRentalsByCustomer(string idCustomer)
+        {
+
+            if (!_customerServise.GetAllCustomer().Any(c => c.Id == idCustomer))
+                throw new ArgumentException("Customer with the specified ID does not exist.");
+
+            DateTime now = DateTime.Now;
+
+            var activeAndFutureRentals = _renting.GetAllRenting().Where(r =>
+                r.IdCustomer == idCustomer &&
+                (r.RentalTime <= now && (r.ReturnTime == null || r.ReturnTime > now) ||
+                 r.RentalTime > now)).ToList();
+
+            return activeAndFutureRentals;
         }
 
 

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Dal.models;
 using YourNamespace;
+using Bl.CustomerInput;
 
 namespace Server.Controllers
 {
@@ -123,15 +124,30 @@ namespace Server.Controllers
         {
             try
             {
-                var allMyCurrentRentals = _blRenting.GetAllMyCurrentRentals(idCustomer);
-                return Ok(allMyCurrentRentals);
+                List<Renting> allMyCurrentRentals = _blRenting.GetAllMyCurrentRentals(idCustomer);
+               
+                return Ok(CustomerRenting.FromRentingList(allMyCurrentRentals));
             }
             catch (Exception ex)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, "An unexpected error occurred: " + ex.Message);
             }
         }
-        
+
+        [HttpGet("GetMyActiveAndFutureRentals")]
+        public IActionResult GetMyActiveAndFutureRentals([FromQuery] string idCustomer)
+        {
+            try
+            {
+                List<Renting> allMyCurrentRentals = _blRenting.GetActiveAndFutureRentalsByCustomer(idCustomer);
+                return Ok(CustomerRenting.FromRentingList(allMyCurrentRentals));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "An unexpected error occurred: " + ex.Message);
+            }
+        }
+
 
 
 

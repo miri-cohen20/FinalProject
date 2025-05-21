@@ -36,6 +36,8 @@ export const fetchRentalHistory = createAsyncThunk(
         return await fetchRentalHistoryApi(customerId);
     }
 );
+
+
 export const fetchGetAllCarAsyncAction = createAsyncThunk("getAllCar", async () => {
     const response = await fetchAllCar();
     
@@ -46,6 +48,7 @@ export const fetchGetAllCarAsyncAction = createAsyncThunk("getAllCar", async () 
     
     return await response.json(); 
 });
+
 export const fetchGetAllRentingAsyncAction = createAsyncThunk("getAllRenting", async () => {
     const response = await fetchAllRenting();
     

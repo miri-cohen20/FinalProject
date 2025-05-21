@@ -1,0 +1,88 @@
+/* SignUpLoginComponent.css */
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #6DD5FA 0%, #2980B9 100%);
+  font-family: 'Varela Round', Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* מרכז את התוכן */
+}
+
+.car-bg-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* מרכז את הטקסט */
+}
+
+.signup-login-box {
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 18px;
+  box-shadow: 0 2px 32px rgba(44, 62, 80, 0.11);
+  padding: 32px 22px 24px 22px;
+  max-width: 350px;
+  width: 100%;
+  margin: 1rem 0; /* הוספת רווח בין הקופסה לתמונה */
+}
+
+  .car-image {
+    width: 340px;
+    max-width: 90vw;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 8px 24px rgba(44,62,80,0.23));
+    transition: transform 0.3s;
+  }
+  
+  .car-image:hover {
+    transform: scale(1.03) rotate(-2deg);
+  }
+
+
+  body {
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #6DD5FA 0%, #2980B9 100%);
+    font-family: 'Varela Round', Arial, sans-serif;
+  }
+  
+  .car-bg-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .car-image {
+    width: 340px;
+    max-width: 90vw;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 8px 24px rgba(44,62,80,0.23));
+    transition: transform 0.3s;
+  }
+  
+  .car-image:hover {
+    transform: scale(1.03) rotate(-2deg);
+  }
+  
+  .signup-login-box {
+    background: rgba(255,255,255,0.97);
+    border-radius: 18px;
+    box-shadow: 0 2px 32px rgba(44,62,80,0.11);
+    padding: 32px 22px 24px 22px;
+    max-width: 350px;
+    width: 100%;
+    margin-top: -1.5rem;
+  }
+  .client-container {
+    max-width: 400px;
+    margin: 5rem auto; /* מרכז את הקומפוננטה */
+    padding: 32px;
+    border-radius: 12px;
+    background: "#fff";
+    box-shadow: "0 0 24px #cce";
+    text-align: center; /* מרכז את הטקסט */
+}

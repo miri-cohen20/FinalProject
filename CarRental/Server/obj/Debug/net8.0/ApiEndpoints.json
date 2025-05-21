@@ -1,0 +1,307 @@
+[
+  {
+    "ContainingType": "Server.Controllers.CustomerController",
+    "Method": "GetAllIdCar",
+    "RelativePath": "api/Customer/getAllCar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.CustomerController",
+    "Method": "GetAllMyCurrentRentals",
+    "RelativePath": "api/Customer/getAllMyCurrentRentals",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idCustomer",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.CustomerController",
+    "Method": "GetAllRenting",
+    "RelativePath": "api/Customer/getAllRenting",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.CustomerController",
+    "Method": "GetHistoryCustomerRenting",
+    "RelativePath": "api/Customer/getHistoryCustomerRenting",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idCustomer",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.CustomerController",
+    "Method": "GetMyActiveAndFutureRentals",
+    "RelativePath": "api/Customer/GetMyActiveAndFutureRentals",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idCustomer",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.CustomerController",
+    "Method": "RentingCar",
+    "RelativePath": "api/Customer/renting",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carRentalRequest",
+        "Type": "Server.Controllers.CustomerController\u002BCarRentalRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.CustomerController",
+    "Method": "UpdateCustomer",
+    "RelativePath": "api/Customer/updateCustomer",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customer",
+        "Type": "YourNamespace.CustomerRegistration",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.RentalAvailableController",
+    "Method": "EndRental",
+    "RelativePath": "api/RentalAvailable/endRental",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idCustomer",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "idRenting",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.RentalAvailableController",
+    "Method": "ExtendRental",
+    "RelativePath": "api/RentalAvailable/extendRental",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idRenting",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "customerId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "untilTime",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.RentalAvailableController",
+    "Method": "GetPriceForExtendRental",
+    "RelativePath": "api/RentalAvailable/GetPriceForExtendRental",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idRenting",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "customerId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "untilTime",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.RentalAvailableController",
+    "Method": "actionResult",
+    "RelativePath": "api/RentalAvailable/getUntilCanRental",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idCustomer",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "idRenting",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.RentalAvailableController",
+    "Method": "Impropriety",
+    "RelativePath": "api/RentalAvailable/improperty",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idRenting",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "description",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.RentalAvailableController",
+    "Method": "LackOfCleanliness",
+    "RelativePath": "api/RentalAvailable/lackOfCleanliness",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idRenting",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "description",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.SighController",
+    "Method": "isCustomer",
+    "RelativePath": "api/Sigh/isCostumer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.SighController",
+    "Method": "isWorker",
+    "RelativePath": "api/Sigh/isWorker",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.SighController",
+    "Method": "Login",
+    "RelativePath": "api/Sigh/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "System.Tuple\u00602[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.SighController",
+    "Method": "sighUpCustomer",
+    "RelativePath": "api/Sigh/sighUpCustomer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customer",
+        "Type": "YourNamespace.CustomerRegistration",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

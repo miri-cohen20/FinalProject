@@ -35,7 +35,7 @@ public partial class dbClass : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename='H:\\FinalProject\\CarRental\\Dal\\Data\\database.mdf';Integrated Security=True;Connect Timeout=30;Encrypt=True;Integrated Security=True;Connect Timeout=30");
+        => optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename='C:\\Users\\User\\Desktop\\הנדסאים\\FinalProject\\CarRental\\Dal\\Data\\database.mdf';Integrated Security=True;Connect Timeout=30;Encrypt=True;Integrated Security=True;Connect Timeout=30");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -45,16 +45,21 @@ public partial class dbClass : DbContext
 
             entity.ToTable("Car");
 
-            entity.Property(e => e.Id).HasMaxLength(50);
+            entity.Property(e => e.Id)
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
             entity.Property(e => e.City)
                 .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("city");
             entity.Property(e => e.CleanStatus).HasColumnName("cleanStatus");
             entity.Property(e => e.DescriptionCleaning)
                 .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("descriptionCleaning");
             entity.Property(e => e.DescriptionProper)
                 .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("descriptionProper");
             entity.Property(e => e.FinalCleaning).HasColumnType("datetime");
             entity.Property(e => e.LastCorrection).HasColumnType("datetime");
@@ -62,6 +67,7 @@ public partial class dbClass : DbContext
             entity.Property(e => e.Seats).HasColumnName("seats");
             entity.Property(e => e.Street)
                 .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("street");
         });
 
@@ -69,7 +75,9 @@ public partial class dbClass : DbContext
         {
             entity.HasKey(e => e.Id).HasName("PK__tmp_ms_x__3214EC0774875EA2");
 
-            entity.Property(e => e.Id).HasMaxLength(50);
+            entity.Property(e => e.Id)
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
 
             entity.HasOne(d => d.IdNavigation).WithOne(p => p.Customer)
                 .HasForeignKey<Customer>(d => d.Id)
@@ -94,8 +102,12 @@ public partial class dbClass : DbContext
             entity.ToTable("Renting");
 
             entity.Property(e => e.Available).HasColumnName("available");
-            entity.Property(e => e.IdCar).HasMaxLength(50);
-            entity.Property(e => e.IdCustomer).HasMaxLength(50);
+            entity.Property(e => e.IdCar)
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
+            entity.Property(e => e.IdCustomer)
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
             entity.Property(e => e.Price).HasColumnName("price");
             entity.Property(e => e.RentalTime).HasColumnType("datetime");
             entity.Property(e => e.ReturnTime).HasColumnType("datetime");
@@ -115,7 +127,9 @@ public partial class dbClass : DbContext
         {
             entity.HasKey(e => e.Id).HasName("PK__tmp_ms_x__3214EC07808DA9D8");
 
-            entity.Property(e => e.Description).HasMaxLength(50);
+            entity.Property(e => e.Description)
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
         });
 
         modelBuilder.Entity<Table>(entity =>
@@ -134,7 +148,9 @@ public partial class dbClass : DbContext
             entity.ToTable("Time");
 
             entity.Property(e => e.Id).ValueGeneratedNever();
-            entity.Property(e => e.Duration).HasMaxLength(50);
+            entity.Property(e => e.Duration)
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
         });
 
         modelBuilder.Entity<User>(entity =>
@@ -143,28 +159,37 @@ public partial class dbClass : DbContext
 
             entity.ToTable("User");
 
-            entity.Property(e => e.Id).HasMaxLength(50);
+            entity.Property(e => e.Id)
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
             entity.Property(e => e.BuildingNumber).HasColumnName("buildingNumber");
             entity.Property(e => e.City)
                 .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("city");
             entity.Property(e => e.Email)
                 .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("email");
             entity.Property(e => e.FirstName)
                 .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("firstName");
             entity.Property(e => e.LastName)
                 .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("lastName");
             entity.Property(e => e.Password)
                 .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("password");
             entity.Property(e => e.PhonNumber)
                 .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("phonNumber");
             entity.Property(e => e.Street)
                 .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("street");
         });
 
@@ -172,7 +197,9 @@ public partial class dbClass : DbContext
         {
             entity.HasKey(e => e.Id).HasName("PK__tmp_ms_x__3214EC07D0D6F053");
 
-            entity.Property(e => e.Id).HasMaxLength(50);
+            entity.Property(e => e.Id)
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
             entity.Property(e => e.Price).HasColumnName("price");
 
             entity.HasOne(d => d.IdNavigation).WithOne(p => p.Worker)

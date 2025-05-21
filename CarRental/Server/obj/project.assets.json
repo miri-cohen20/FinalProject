@@ -5158,23 +5158,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\כהן מרים\\.nuget\\packages\\": {},
+    "C:\\Users\\User\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\FinalProject\\CarRental\\Server\\Server.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\הנדסאים\\FinalProject\\CarRental\\Server\\Server.csproj",
       "projectName": "Server",
-      "projectPath": "H:\\FinalProject\\CarRental\\Server\\Server.csproj",
-      "packagesPath": "C:\\Users\\כהן מרים\\.nuget\\packages\\",
-      "outputPath": "H:\\FinalProject\\CarRental\\Server\\obj\\",
+      "projectPath": "C:\\Users\\User\\Desktop\\הנדסאים\\FinalProject\\CarRental\\Server\\Server.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\הנדסאים\\FinalProject\\CarRental\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\כהן מרים\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5190,11 +5190,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "H:\\FinalProject\\CarRental\\Bl\\Bl.csproj": {
-              "projectPath": "H:\\FinalProject\\CarRental\\Bl\\Bl.csproj"
+            "C:\\Users\\User\\Desktop\\הנדסאים\\FinalProject\\CarRental\\Bl\\Bl.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\הנדסאים\\FinalProject\\CarRental\\Bl\\Bl.csproj"
             },
-            "H:\\FinalProject\\CarRental\\Dal\\Dal.csproj": {
-              "projectPath": "H:\\FinalProject\\CarRental\\Dal\\Dal.csproj"
+            "C:\\Users\\User\\Desktop\\הנדסאים\\FinalProject\\CarRental\\Dal\\Dal.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\הנדסאים\\FinalProject\\CarRental\\Dal\\Dal.csproj"
             }
           }
         }
@@ -5208,7 +5208,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -5240,6 +5241,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.Net.Sdk.Compilers.Toolset",
+            "version": "[9.0.300, 9.0.300]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -5248,7 +5255,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

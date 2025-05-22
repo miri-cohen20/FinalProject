@@ -1,6 +1,6 @@
 
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { fetchSighUp, fetchLogin,updateCustomerDetailsApi, fetchRentalHistoryApi ,fetchAllCar, fetchAllRenting } from "../api";
+import { fetchSighUp, fetchLogin,updateCustomerDetailsApi, fetchRentalHistoryApi  } from "../api";
 
 export const fetchSighUpAsyncAction = createAsyncThunk(
     "sigh/sighUp",
@@ -36,28 +36,5 @@ export const fetchRentalHistory = createAsyncThunk(
         return await fetchRentalHistoryApi(customerId);
     }
 );
-
-
-export const fetchGetAllCarAsyncAction = createAsyncThunk("getAllCar", async () => {
-    const response = await fetchAllCar();
-    
-    if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message);
-    }
-    
-    return await response.json(); 
-});
-
-export const fetchGetAllRentingAsyncAction = createAsyncThunk("getAllRenting", async () => {
-    const response = await fetchAllRenting();
-    
-    if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message);
-    }
-    
-    return await response.json(); 
-});
 
 

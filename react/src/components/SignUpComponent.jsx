@@ -26,7 +26,7 @@ const SignUpLoginComponent = () => {
     phoneNumber: "",
     email: "",
     city: "",
-    address: "",
+    street: "",
     buildingNumber: "",
     password: ""
   });
@@ -130,7 +130,7 @@ const SignUpLoginComponent = () => {
             <input name="phoneNumber" placeholder="מספר טלפון" onChange={handleChange} required />
             <input name="email" placeholder="אימייל" type="email" onChange={handleChange} required />
             <input name="city" placeholder="עיר" onChange={handleChange} required />
-            <input name="address" placeholder="רחוב" onChange={handleChange} required />
+            <input name="street" placeholder="רחוב" onChange={handleChange} required />
             <input name="buildingNumber" placeholder="מספר בית" onChange={handleChange} />
             <input name="password" placeholder="סיסמה" type="password" onChange={handleChange} required />
             <button type="submit" disabled={loading}>

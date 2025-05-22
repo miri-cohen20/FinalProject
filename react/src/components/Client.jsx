@@ -60,7 +60,7 @@ const Client = () => {
   const handleLogout = () => {
     navigate("/");
   };
-  const handleRental = () => navigate("/RentCar");
+  const handleRental = () => navigate("/rent-car");
   const handleActivity = () => navigate("/activity-rental");
 
   const openHistory = () => {
@@ -79,69 +79,82 @@ const Client = () => {
   const handleEditSubmit = (e) => {
     e.preventDefault();
     if (client?.id) {
-      dispatch(updateCustomerDetails({ id: client.id, data: editData }));
+      const dataToSend = {
+        ...editData,
+        id: client.id, // הוספת id!
+        buildingNumber: editData.buildingNumber === "" ? null : Number(editData.buildingNumber)
+      };
+      dispatch(updateCustomerDetails({ id: client.id, data: dataToSend }));
     }
   };
 
   return (
-    <div className="client-root">
+    <div className="client-bg">
+    <div className="client-title-box">
       <h1 className="client-title">
         {client && client.firstName ? `שלום ל: ${client.firstName}` : "שלום אורח"}
       </h1>
       <p className="client-subtitle">
         אנחנו כאן תמיד לשירותך
       </p>
+    </div>
+
       <div className="client-btns">
         <button onClick={handleRental} className="client-btn">השכרת רכב</button>
         <button onClick={openHistory} className="client-btn">היסטורית השכרות</button>
         <button onClick={handleActivity} className="client-btn">השכרת פעילות</button>
-        <button onClick={openEdit} className="client-btn">שינוי פרטים אישיים</button>
+        {/* הכפתור של הפופאפ הצמוד */}
+        <div className="client-btn-popup-wrapper">
+          <button onClick={() => setShowEdit(true)} className="client-btn">
+            שינוי פרטים אישיים
+          </button>
+          {showEdit && (
+            <>
+              <div className="popup-overlay" onClick={() => setShowEdit(false)} />
+              <div className="popup-content popup-below-btn">
+                <button className="popup-close" onClick={() => setShowEdit(false)}>×</button>
+                <h2 className="popup-title">שינוי פרטים אישיים</h2>
+                <form onSubmit={handleEditSubmit}>
+                  <input name="firstName" placeholder="שם פרטי" value={editData.firstName} onChange={handleEditChange} className="client-input" />
+                  <input name="lastName" placeholder="שם משפחה" value={editData.lastName} onChange={handleEditChange} className="client-input" />
+                  <input name="phoneNumber" placeholder="טלפון" value={editData.phoneNumber} onChange={handleEditChange} className="client-input" />
+                  <input name="email" placeholder="אימייל" value={editData.email} onChange={handleEditChange} className="client-input" />
+                  <input name="city" placeholder="עיר" value={editData.city} onChange={handleEditChange} className="client-input" />
+                  <input name="street" placeholder="רחוב" value={editData.street} onChange={handleEditChange} className="client-input" />
+                  <input name="buildingNumber" placeholder="מספר בית" type="number" value={editData.buildingNumber} onChange={handleEditChange} className="client-input" />
+                  <input name="password" placeholder="סיסמה חדשה" type="password" value={editData.password} onChange={handleEditChange} className="client-input" />
+                  <button type="submit" disabled={loading} className="client-btn btn-block">
+                    {loading ? "שומר..." : "עדכן"}
+                  </button>
+                  {error && <div className="popup-error">{error}</div>}
+                  {updateSuccess && <div className="popup-success">הפרטים עודכנו!</div>}
+                </form>
+              </div>
+            </>
+          )}
+        </div>
       </div>
 
-      <div className="client-logout-bar">
-        <button onClick={handleLogout} className="client-logout-btn">התנתק</button>
-      </div>
-
+      {/* פופאפ היסטוריה (אם יש קומפוננטה Popup, תעדכני, אחרת תעשי בשיטה כמו כאן) */}
       {showHistory && (
-        <Popup onClose={() => setShowHistory(false)}>
-          <h2 style={{ textAlign: "center" }}>היסטורית השכרות</h2>
-          {loading && <div>טוען...</div>}
-          {error && <div style={{ color: "red" }}>{error}</div>}
-          <ul>
-            {rentalHistory && rentalHistory.length > 0 ? (
-              rentalHistory.map((r, i) => (
-                <li key={i}>{JSON.stringify(r)}</li>
-              ))
-            ) : (
-              <li>לא נמצאו השכרות</li>
-            )}
-          </ul>
-        </Popup>
+        <div className="popup-overlay">
+          <div className="popup-content popup-center">
+            <button className="popup-close" onClick={() => setShowHistory(false)}>×</button>
+            <h2 className="popup-title">היסטורית השכרות</h2>
+            {loading && <div>טוען...</div>}
+            {error && <div className="popup-error">{error}</div>}
+            <ul>
+              {rentalHistory && rentalHistory.length > 0 ? (
+                rentalHistory.map((r, i) => (
+                  <li key={i}>{JSON.stringify(r)}</li>
+                ))
+              ) : (
+                <li>לא נמצאו השכרות</li>
+              )}
+            </ul>
+          </div>
+        </div>
       )}
-
-      {showEdit && (
-        <Popup onClose={() => setShowEdit(false)}>
-          <h2 style={{ textAlign: "center" }}>שינוי פרטים אישיים</h2>
-          <form onSubmit={handleEditSubmit}>
-            <input name="firstName" placeholder="שם פרטי" value={editData.firstName} onChange={handleEditChange} className="client-input" />
-            <input name="lastName" placeholder="שם משפחה" value={editData.lastName} onChange={handleEditChange} className="client-input" />
-            <input name="phoneNumber" placeholder="טלפון" value={editData.phoneNumber} onChange={handleEditChange} className="client-input" />
-            <input name="email" placeholder="אימייל" value={editData.email} onChange={handleEditChange} className="client-input" />
-            <input name="city" placeholder="עיר" value={editData.city} onChange={handleEditChange} className="client-input" />
-            <input name="street" placeholder="רחוב" value={editData.street} onChange={handleEditChange} className="client-input" />
-            <input name="buildingNumber" placeholder="מספר בית" type="number" value={editData.buildingNumber} onChange={handleEditChange} className="client-input" />
-            <input name="password" placeholder="סיסמה חדשה" type="password" value={editData.password} onChange={handleEditChange} className="client-input" />
-            <button type="submit" disabled={loading} className="client-btn" style={{ width: "100%" }}>
-              {loading ? "שומר..." : "עדכן"}
-            </button>
-            {error && <div style={{ color: "red", textAlign: "center" }}>{error}</div>}
-            {updateSuccess && <div style={{ color: "green", textAlign: "center" }}>הפרטים עודכנו!</div>}
-          </form>
-        </Popup>
-      )}
-
-
-
     </div>
   );
 };

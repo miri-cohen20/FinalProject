@@ -26,27 +26,29 @@ const RentCar = () => {
     dispatch(fetchGetAllRentingAsyncAction());
   }, [dispatch]);
 
-  const handleFilter = () => {
+  useEffect(()=>{const handleFilter = () => {
     const payload = {
-      startTime: startTime || undefined,
-      endTime: endTime || undefined,
-      selectedSeats: selectedSeats || undefined,
-      selectedCity: selectedCity || undefined,
-      selectedStreet: selectedStreet || undefined,
+        selectedSeats: selectedSeats || undefined,
+        selectedCity: selectedCity || undefined,
+        selectedStreet: selectedStreet || undefined,
     };
 
-    setFilteredCars( dispatch(selectAvailableCars(payload)));
-  };
+    if (showAvailableOnly) {
+        payload.startTime = startTime || undefined;
+        payload.endTime = endTime || undefined;
+    }
 
-  useEffect(() => {
-    handleFilter();
-    const cities = [...new Set(filteredCars.map(car => car.city))];
-    const streets = [...new Set(filteredCars.filter(car => car.city === selectedCity).map(car => car.street))];
+    setFilteredCars(dispatch(selectAvailableCars(payload)));
+};
+}, [startTime,endTime,selectedSeats,selectedCity,selectedStreet,showAvailableOnly])
 
-    if (loading) return;
-    if (error) return;
 
-  }, [dispatch, cars, selectedCity, selectedStreet, startTime, endTime, selectedSeats]);
+
+const cities = [...new Set(cars.map(car => car.city))];
+const streets = selectedCity 
+    ? [...new Set(cars.filter(car => car.city === selectedCity).map(car => car.street))]
+    : [...new Set(cars.map(car => car.street))];
+
 
   return (
     <div>
@@ -108,9 +110,9 @@ const RentCar = () => {
               </button>
             </li>
           ))
-        ) : (
+        ) : loading? <li>loading...</li>:
           <li>אין רכבים זמינים</li>
-        )}
+        }
       </ul>
     </div>
   );

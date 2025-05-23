@@ -6,7 +6,7 @@ const getAllCarSlice = createSlice({
     initialState: {
         cars: [],
         rentals: [],
-        loading: false,
+        loading: true,
         error: null
     },
     reducers: {

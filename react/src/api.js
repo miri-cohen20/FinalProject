@@ -79,3 +79,27 @@ export const fetchRentalHistoryApi = async (customerId) => {
     if (!response.ok) throw new Error("שגיאה בשליפת היסטוריה");
     return await response.json();
 };
+// export const fetchAllCar = async () => {
+//   const response = await fetch(`http://localhost:5108/api/Customer/getAllCar`);
+//   if (!response.ok) throw new Error(response.message);
+//   return await response.value.json();
+// };
+export const fetchAllRenting = async () => {
+  const response = await fetch(`http://localhost:5108/api/Customer/getAllRenting`);
+  if (!response.ok) throw new Error(response.message);
+  return await response.value.json();
+};
+ export const  fetchAllCar = async()=> {
+  try {
+      const response = await fetch(`http://localhost:5108/api/Customer/getAllCar`);
+      if (!response.ok) {
+          throw new Error(response.message);
+      }
+      const data = await response.json(); // כאן אתה מקבל את ה-JSON
+      const cars = data.$values; // גישה למערך הרכבים
+      console.log(cars); // הדפס את הרכבים
+  } catch (error) {
+      console.error('There has been a problem with your fetch operation:', error);
+  }
+  return cars
+}

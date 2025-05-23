@@ -60,7 +60,7 @@ const Client = () => {
   const handleLogout = () => {
     navigate("/");
   };
-  const handleRental = () => navigate("/rent-car");
+  const handleRental = () => navigate("/RentCar");
   const handleActivity = () => navigate("/activity-rental");
 
   const openHistory = () => {

@@ -1,6 +1,6 @@
 
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { fetchSighUp, fetchLogin,updateCustomerDetailsApi, fetchRentalHistoryApi ,fetchAllRenting,fetchAllCar } from "../api";
+import { fetchSighUp, fetchLogin,updateCustomerDetailsApi, fetchRentalHistoryApi ,fetchAllRenting,fetchAllCar, fetchAllActiveAndFutureRentals,fetchAllActivityRentals } from "../api";
 
 export const fetchSighUpAsyncAction = createAsyncThunk(
     "sigh/sighUp",
@@ -38,16 +38,7 @@ export const fetchRentalHistory = createAsyncThunk(
 );
 
 
-export const fetchGetAllCarAsyncAction = createAsyncThunk("getAllCar", async () => {
-    const response = await fetchAllCar();
 
-    if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message);
-    }
-
-    return await response.json(); 
-});
 
 export const fetchGetAllRentingAsyncAction = createAsyncThunk("getAllRenting", async () => {
     const response = await fetchAllRenting();
@@ -59,3 +50,22 @@ export const fetchGetAllRentingAsyncAction = createAsyncThunk("getAllRenting", a
 
     return await response.json(); 
 });
+
+export const fetchActivityRentals = createAsyncThunk(
+    "activity/fetchActivityRentals",
+    async (customerId) => {
+        return await fetchAllActivityRentals(customerId);
+    }
+);
+export const fetchActivityAndFutureRentals = createAsyncThunk(
+    "activity/fetchActivityAndFutureRentals",
+    async (customerId) => {
+        return await fetchAllActiveAndFutureRentals(customerId);
+    }
+);
+export const fetchGetAllCarAsyncAction = createAsyncThunk(
+    "getAllCar",
+    async () => {
+        return await fetchAllCar();
+    }
+);

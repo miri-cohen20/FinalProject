@@ -23,12 +23,19 @@ namespace Server.Controllers
             _sighIn = sighIn;
         }
 
+        public class LogInDeatails
+        {
+            public string id { get; set; }
+            public string password { get; set; }
+            
+        }
+
         [HttpPost("login")]
-        public IActionResult Login([FromBody] Tuple<string, string> login)
+        public IActionResult Login([FromBody] LogInDeatails login)
         {
             try
             {
-                var result = _sighIn.Log(login.Item1, login.Item2);
+                var result = _sighIn.Log(login.id, login.password);
                 return Ok(result);
             }
             catch (ArgumentException ex)

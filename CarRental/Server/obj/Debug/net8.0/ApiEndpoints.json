@@ -282,7 +282,7 @@
     "Parameters": [
       {
         "Name": "login",
-        "Type": "System.Tuple\u00602[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "Server.Controllers.SighController\u002BLogInDeatails",
         "IsRequired": true
       }
     ],

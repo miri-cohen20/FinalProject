@@ -61,7 +61,7 @@ const Client = () => {
     navigate("/");
   };
   const handleRental = () => navigate("/RentCar");
-  const handleActivity = () => navigate("/activity-rental");
+  const handleActivity = () => navigate("/ActivityRentals");
 
   const openHistory = () => {
     if (client?.id) dispatch(fetchRentalHistory(client.id));

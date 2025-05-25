@@ -414,17 +414,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/StringStringTuple"
+                "$ref": "#/components/schemas/LogInDeatails"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/StringStringTuple"
+                "$ref": "#/components/schemas/LogInDeatails"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/StringStringTuple"
+                "$ref": "#/components/schemas/LogInDeatails"
               }
             }
           }
@@ -577,14 +577,14 @@
         },
         "additionalProperties": false
       },
-      "StringStringTuple": {
+      "LogInDeatails": {
         "type": "object",
         "properties": {
-          "item1": {
+          "id": {
             "type": "string",
             "nullable": true
           },
-          "item2": {
+          "password": {
             "type": "string",
             "nullable": true
           }

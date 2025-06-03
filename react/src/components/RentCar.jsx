@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchGetAllCarAsyncAction, fetchGetAllRentingAsyncAction } from '../redux/Thunk';
 import { selectAvailableCars } from '../redux/getAllCarSlice';
-
+import "./AppTheme.css";
 const RentCar = () => {
   const dispatch = useDispatch();
   const cars = useSelector(state => state.car.cars);

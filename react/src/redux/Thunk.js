@@ -1,6 +1,7 @@
 
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { fetchSighUp, fetchLogin,updateCustomerDetailsApi, fetchRentalHistoryApi ,fetchAllRenting,fetchAllCar, fetchAllActiveAndFutureRentals,fetchAllActivityRentals } from "../api";
+import { fetchSighUp, fetchLogin,updateCustomerDetailsApi, fetchRentalHistoryApi ,fetchAllRenting,fetchAllCar, fetchAllActiveAndFutureRentals,fetchAllActivityRentals,
+     fetchEndRental, fetchComlaintMal, fetchComlaintCleaning, fetchGetUntilExtendRental, fetchGetPriceForExtendRental, fetchExtendRental} from "../api";
 
 export const fetchSighUpAsyncAction = createAsyncThunk(
     "sigh/sighUp",
@@ -69,3 +70,56 @@ export const fetchGetAllCarAsyncAction = createAsyncThunk(
         return await fetchAllCar();
     }
 );
+export const fetcheEndReantlasyncAction = createAsyncThunk(
+    "activity/endRental", 
+    async ({customerId, rentalId})=>{
+        return await fetchEndRental({customerId, rentalId});
+         
+    }
+);
+export const fetchComlaintMalasyncAction = createAsyncThunk(
+    "activity/complaintMal", 
+    async ({rentalId, descraption})=>{
+        return await fetchComlaintMal({rentalId, descraption});
+         
+    }
+);
+
+export const fetchComlaintCleaningasyncAction = createAsyncThunk(
+    "activity/complaintMal", 
+    async ({rentalId, descraption})=>{
+        return await fetchComlaintCleaning({rentalId, descraption});
+         
+    }
+);
+export const fetchUntilExtendRental = createAsyncThunk(
+    "activity/extendRental", 
+    async ({idCustomer, idRenting})=>{
+        return await fetchGetUntilExtendRental({idCustomer, idRenting});
+         
+    }
+);
+
+export const fetchGetPriceExtendRental = createAsyncThunk(
+    "activity/priceForExtendRental", 
+    async ({rentalId,customerId, untilTime })=>{
+        return await fetchGetPriceForExtendRental({rentalId,customerId, untilTime });
+         
+    }
+);
+export const fetchExtendRentalAsinc = createAsyncThunk(
+    "activity/ExtendRental", 
+    async ({rentalId,customerId, untilTime })=>{
+        return await fetchExtendRental({rentalId,customerId, untilTime });
+         
+    }
+);
+
+
+
+
+
+
+
+
+

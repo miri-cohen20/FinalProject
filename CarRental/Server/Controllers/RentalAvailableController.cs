@@ -16,7 +16,7 @@ namespace Server.Controllers
         }
 
         [HttpPut("extendRental")]
-    public IActionResult ExtendRental([FromBody] int idRenting, [FromQuery] string customerId, [FromQuery] DateTime untilTime)
+    public IActionResult ExtendRental([FromQuery] int idRenting, [FromQuery] string customerId, [FromBody] DateTime untilTime)
         {
 
             try
@@ -42,7 +42,7 @@ namespace Server.Controllers
 
 
         [HttpPut("GetPriceForExtendRental")]
-        public IActionResult GetPriceForExtendRental([FromBody] int idRenting, [FromQuery] string customerId, [FromQuery] DateTime untilTime)
+        public IActionResult GetPriceForExtendRental([FromQuery] int idRenting, [FromQuery] string customerId, [FromBody] DateTime untilTime)
         {
 
             try

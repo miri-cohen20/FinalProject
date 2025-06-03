@@ -1,8 +1,10 @@
 import { useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
-
+import "./AppTheme.css";
 const ActivityFuture = () => {
+    const navigate = useNavigate()
     const location = useLocation();
     const { rental, seats, street,city } = location.state || {}; // קבלת פרטי ההשכרה
   
@@ -10,6 +12,9 @@ const ActivityFuture = () => {
     if (!rental) {
         return <div>No rental details available.</div>; // טיפול במקרה שאין פרטים
     }
+    const handleExtendRental = () => {
+        navigate("/ExtendRental", { state: { rental } }); // ניווט לדף סיום השכרה עם פרטי השכרה
+    };
     return (
         <div>
             <h2>Rental Details</h2>
@@ -22,6 +27,10 @@ const ActivityFuture = () => {
             <p>Return time: {rental.returnTime}</p>
             <p>Price: {rental.price}</p>
             
+       
+        <div>
+            <button onClick={handleExtendRental}>Extend rental</button>
+        </div>
         </div>
     );
 };

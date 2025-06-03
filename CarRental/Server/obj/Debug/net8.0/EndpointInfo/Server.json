@@ -170,18 +170,18 @@
         ],
         "parameters": [
           {
+            "name": "idRenting",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
             "name": "customerId",
             "in": "query",
             "schema": {
               "type": "string"
-            }
-          },
-          {
-            "name": "untilTime",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
             }
           }
         ],
@@ -189,20 +189,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "integer",
-                "format": "int32"
+                "type": "string",
+                "format": "date-time"
               }
             },
             "text/json": {
               "schema": {
-                "type": "integer",
-                "format": "int32"
+                "type": "string",
+                "format": "date-time"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "integer",
-                "format": "int32"
+                "type": "string",
+                "format": "date-time"
               }
             }
           }
@@ -221,18 +221,18 @@
         ],
         "parameters": [
           {
+            "name": "idRenting",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
             "name": "customerId",
             "in": "query",
             "schema": {
               "type": "string"
-            }
-          },
-          {
-            "name": "untilTime",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
             }
           }
         ],
@@ -240,20 +240,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "integer",
-                "format": "int32"
+                "type": "string",
+                "format": "date-time"
               }
             },
             "text/json": {
               "schema": {
-                "type": "integer",
-                "format": "int32"
+                "type": "string",
+                "format": "date-time"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "integer",
-                "format": "int32"
+                "type": "string",
+                "format": "date-time"
               }
             }
           }

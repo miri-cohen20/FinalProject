@@ -1,4 +1,3 @@
-
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchActivityRentals, fetchActivityAndFutureRentals } from "./Thunk";
 
@@ -6,16 +5,14 @@ const initialState = {
     activityRentals: [],
     activityAndFutueRentals: [],
     loading: false,
-    error: null,   
-    
+    error: null,
 };
 
 const activitySlice = createSlice({
     name: "activity",
     initialState,
-    reducers: {
+    reducers: {},
 
-    },
     extraReducers: (builder) => {
         builder
             .addCase(fetchActivityRentals.pending, (state) => {
@@ -33,21 +30,17 @@ const activitySlice = createSlice({
             .addCase(fetchActivityAndFutureRentals.pending, (state) => {
                 state.loading = true;
                 state.error = null;
-                
             })
             .addCase(fetchActivityAndFutureRentals.fulfilled, (state, action) => {
                 state.loading = false;
                 state.activityAndFutueRentals = action.payload;
-                
             })
             .addCase(fetchActivityAndFutureRentals.rejected, (state, action) => {
                 state.loading = false;
                 state.error = action.error.message;
-                
             })
 
-    }
-});
+}})
 
-export const {  } = activitySlice.actions;
+export const {} = activitySlice.actions;
 export default activitySlice.reducer;

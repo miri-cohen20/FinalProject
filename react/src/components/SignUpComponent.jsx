@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { fetchSighUpAsyncAction, fetchLoginAsyncAction } from "../redux/Thunk";
 import { clearError, clearMessage } from "../redux/sighSlice";
-import "./SignUpComponent.css";
+import "./AppTheme.css";
 
 const carImgUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Toyota_Yaris_II_1.3_VVT-i_Facelift_front_20100801.jpg/800px-Toyota_Yaris_II_1.3_VVT-i_Facelift_front_20100801.jpg";
 

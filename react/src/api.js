@@ -183,3 +183,182 @@ export const fetchAllActiveAndFutureRentals = async (idCustomer) => {
     return []; // החזרת מערך ריק במקרה של שגיאה
   }
 }
+export const fetchEndRental = async ({ customerId, rentalId }) => {
+  try {
+    const response = await fetch(`http://localhost:5108/api/RentalAvailable/endRental?idCustomer=${customerId}&idRenting=${rentalId}`, {
+      method: 'PUT', // שינוי לשיטת PUT
+      headers: {
+        'Content-Type': 'application/json', // הגדרת סוג התוכן
+      },
+      body: JSON.stringify({ idCustomer: customerId, idRenting: rentalId }) // שליחת נתונים בגוף הבקשה
+    });
+
+    const contentType = response.headers.get("Content-Type");
+    let responseData;
+
+    if (contentType && contentType.includes("application/json")) {
+      responseData = await response.json();
+    } else {
+      responseData = await response.text();
+    }
+
+    if (!response.ok) {
+      throw new Error(responseData.message || responseData);
+    }
+
+    return responseData;
+  } catch (error) {
+    console.error('There has been a problem with your fetch operation:', error);
+    return Promise.reject(error); // החזרת Promise.reject במקרה של שגיאה
+  }
+};
+
+export const fetchComlaintMal = async ({rentalId,descraption }) => {
+  try {
+    const response = await fetch(`http://localhost:5108/api/RentalAvailable/improperty?idRenting=${rentalId}`, {
+      method: 'PUT', // שינוי לשיטת PUT
+      headers: {
+        'Content-Type': 'application/json', // הגדרת סוג התוכן
+      },
+      body: JSON.stringify( descraption ) // שליחת נתונים בגוף הבקשה
+    });
+
+    const contentType = response.headers.get("Content-Type");
+    let responseData;
+
+    if (contentType && contentType.includes("application/json")) {
+      responseData = await response.json();
+    } else {
+      responseData = await response.text();
+    }
+
+    if (!response.ok) {
+      throw new Error(responseData.message || responseData);
+    }
+
+    return responseData;
+  } catch (error) {
+    console.error('There has been a problem with your fetch operation:', error);
+    return Promise.reject(error); // החזרת Promise.reject במקרה של שגיאה
+  }
+};
+
+
+export const fetchComlaintCleaning = async ({rentalId,descraption }) => {
+  try {
+    const response = await fetch(`http://localhost:5108/api/RentalAvailable/lackOfCleanliness?idRenting=${rentalId}`, {
+      method: 'PUT', // שינוי לשיטת PUT
+      headers: {
+        'Content-Type': 'application/json', // הגדרת סוג התוכן
+      },
+      body: JSON.stringify( descraption ) // שליחת נתונים בגוף הבקשה
+    });
+
+    const contentType = response.headers.get("Content-Type");
+    let responseData;
+
+    if (contentType && contentType.includes("application/json")) {
+      responseData = await response.json();
+    } else {
+      responseData = await response.text();
+    }
+
+    if (!response.ok) {
+      throw new Error(responseData.message || responseData);
+    }
+
+    return responseData;
+  } catch (error) {
+    console.error('There has been a problem with your fetch operation:', error);
+    return Promise.reject(error); // החזרת Promise.reject במקרה של שגיאה
+  }
+};
+
+
+
+
+export const fetchGetUntilExtendRental = async ({ idCustomer, idRenting }) => {
+  try {
+    const response = await fetch(
+      `http://localhost:5108/api/RentalAvailable/getUntilCanRental?idCustomer=${idCustomer}&idRenting=${idRenting}`
+    );
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+let date = await response.json()
+    const extendTimeString = await new Date(date).toISOString();
+    console.log('Response from server:', extendTimeString);
+
+    // מחזירים את המחרוזת בדיוק כמו שהתקבלה מהשרת
+    return extendTimeString;
+  } catch (error) {
+    console.error('There has been a problem with your fetch operation:', error);
+    return { error: error.message };
+  }
+};
+
+
+export const fetchGetPriceForExtendRental = async ({ rentalId, customerId, untilTime }) => {
+  try {
+    const response = await fetch(
+      `http://localhost:5108/api/RentalAvailable/GetPriceForExtendRental?idRenting=${rentalId}&customerId=${customerId}`,
+      {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(untilTime)
+      }
+    );
+
+    const responseText = await response.text();
+
+    if (!response.ok) {
+      // במצב של שגיאה בשרת, נחזיר את הודעת השגיאה שהגיעה מהשרת (responseText)
+      throw new Error(responseText || 'שגיאה לא ידועה מהשרת');
+    }
+
+    const price = Number(responseText);
+    if (isNaN(price)) {
+      throw new Error('השרת לא החזיר מחיר תקני');
+    }
+
+    return price;
+  } catch (error) {
+    // error.message יכיל את הודעת השגיאה מהשרת (אם הייתה)
+    console.error('There has been a problem with your fetch operation:', error);
+    return Promise.reject(error); // חשוב להחזיר Promise.reject כדי שה-catch בקומפוננטה יעבוד
+  }
+};
+
+
+
+export const fetchExtendRental = async ({rentalId,customerId, untilTime }) => {
+  try {
+    const response = await fetch(`http://localhost:5108/api/RentalAvailable/extendRental?idRenting=${rentalId}&customerId=${customerId}`, {
+      method: 'PUT', // שינוי לשיטת PUT
+      headers: {
+        'Content-Type': 'application/json', // הגדרת סוג התוכן
+      },
+      body: JSON.stringify( untilTime ) // שליחת נתונים בגוף הבקשה
+    });
+
+    const contentType = response.headers.get("Content-Type");
+    let responseData;
+
+    // if (contentType && contentType.includes("application/json")) {
+    //   responseData = await response.json();
+    // } else {
+    //   responseData = await response.text();
+    // }
+
+    if (!response.ok) {
+      throw new Error(responseData.message || responseData);
+    }
+
+    return response;
+  } catch (error) {
+    console.error('There has been a problem with your fetch operation:', error);
+    return Promise.reject(error); // החזרת Promise.reject במקרה של שגיאה
+  }
+};
+
+

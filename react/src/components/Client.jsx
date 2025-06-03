@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { clearClientError, setCustomer } from "../redux/clientSlice";
 import { fetchRentalHistory, updateCustomerDetails } from "../redux/Thunk";
-import "./Client.css";
+import "./AppTheme.css";
 
 const Popup = ({ onClose, children }) => (
   <div className="popup-overlay">

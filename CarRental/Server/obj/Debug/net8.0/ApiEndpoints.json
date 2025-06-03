@@ -136,7 +136,7 @@
       {
         "Name": "idRenting",
         "Type": "System.Int32",
-        "IsRequired": true
+        "IsRequired": false
       },
       {
         "Name": "customerId",
@@ -146,7 +146,7 @@
       {
         "Name": "untilTime",
         "Type": "System.DateTime",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -162,7 +162,7 @@
       {
         "Name": "idRenting",
         "Type": "System.Int32",
-        "IsRequired": true
+        "IsRequired": false
       },
       {
         "Name": "customerId",
@@ -172,7 +172,7 @@
       {
         "Name": "untilTime",
         "Type": "System.DateTime",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

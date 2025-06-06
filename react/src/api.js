@@ -113,8 +113,8 @@ export const fetchAllCar = async () => {
       seats: item.seats,
       cleanStatus: item.cleanStatus,
       properStatus: item.properStatus,
-      finalCleaning: new Date(item.finalCleaning).toISOString(), // Convert to string
-      lastCorrection: new Date(item.lastCorrection).toISOString(), // Convert to string
+      finalCleaning: new Date(item.finalCleaning).toLocaleString(), // Convert to string
+      lastCorrection: new Date(item.lastCorrection).toLocaleString(), // Convert to string
       
         city: item.city,
         street: item.street,
@@ -146,8 +146,8 @@ export const fetchAllActivityRentals = async (idCustomer) => {
       id: item.id,
       idCar: item.idCar,
       idCustomer: item.idCustomer,
-      rentalTime: new Date(item.rentalTime).toISOString(),
-      returnTime: new Date(item.returnTime).toISOString(),
+      rentalTime: new Date(item.rentalTime).toLocaleString(),
+      returnTime: new Date(item.returnTime).toLocaleString(),
       price: item.price,
       available: item.available
     })); // המרה לאובייקטים רגילים
@@ -171,8 +171,8 @@ export const fetchAllActiveAndFutureRentals = async (idCustomer) => {
       id: item.id,
       idCar: item.idCar,
       idCustomer: item.idCustomer,
-      rentalTime: new Date(item.rentalTime).toISOString(),
-      returnTime: new Date(item.returnTime).toISOString(),
+      rentalTime: new Date(item.rentalTime).toLocaleString(),
+      returnTime: new Date(item.returnTime).toLocaleString(), 
       price: item.price,
       available: item.available
     })); // המרה לאובייקטים רגילים
@@ -286,7 +286,7 @@ export const fetchGetUntilExtendRental = async ({ idCustomer, idRenting }) => {
       throw new Error(response.statusText);
     }
 let date = await response.json()
-    const extendTimeString = await new Date(date).toISOString();
+    const extendTimeString = await new Date(date).toLocaleString();
     console.log('Response from server:', extendTimeString);
 
     // מחזירים את המחרוזת בדיוק כמו שהתקבלה מהשרת
@@ -316,7 +316,7 @@ export const fetchGetPriceForExtendRental = async ({ rentalId, customerId, until
       throw new Error(responseText || 'שגיאה לא ידועה מהשרת');
     }
 
-    const price = Number(responseText);
+    const price = Math.floor(Number(responseText));
     if (isNaN(price)) {
       throw new Error('השרת לא החזיר מחיר תקני');
     }

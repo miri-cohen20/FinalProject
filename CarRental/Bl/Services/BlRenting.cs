@@ -105,9 +105,9 @@ namespace Bl.Services
 
         public double PriceAddedRentalExtension(int idRenting, string customerId, DateTime untilTime)
         {
-         
-            if (!IsRentingActiveByCustomer(idRenting, customerId))
-                throw new InvalidOperationException("The customer is not renting this vehicle now.");
+
+            if (!IsRentingActiveOrFuture(customerId, idRenting))
+                throw new InvalidOperationException("The customer is not renting this vehicle now or in future.");
 
 
             // בודק אם ההשכרה קיימת והלקוח הוא זה שמשכיר אותה
@@ -142,7 +142,7 @@ namespace Bl.Services
                 throw new ArgumentException("Customer with the specified ID does not exist.");
             }
             if(!IsRentingActiveOrFuture( customerId, idRenting))
-                throw new InvalidOperationException("The customer is not renting this vehicle now.");
+                throw new InvalidOperationException("The customer is not renting this vehicle now or in future.");
             
 
             // בודק אם ההשכרה קיימת והלקוח הוא זה שמשכיר אותה

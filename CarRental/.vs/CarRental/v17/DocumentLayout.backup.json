@@ -1,144 +1,144 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\bl\\api\\iblrenting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|solutionrelative:bl\\api\\iblrenting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BEA50D99-A697-4E18-9839-90A382CB7886}|Server\\Server.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\server\\controllers\\rentalavailablecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BEA50D99-A697-4E18-9839-90A382CB7886}|Server\\Server.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\server\\controllers\\rentalavailablecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BEA50D99-A697-4E18-9839-90A382CB7886}|Server\\Server.csproj|solutionrelative:server\\controllers\\rentalavailablecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BEA50D99-A697-4E18-9839-90A382CB7886}|Server\\Server.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\server\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BEA50D99-A697-4E18-9839-90A382CB7886}|Server\\Server.csproj|solutionrelative:server\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\bl\\services\\blrenting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|solutionrelative:bl\\services\\blrenting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\dal\\services\\rentingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|solutionrelative:dal\\services\\rentingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\dal\\models\\renting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|solutionrelative:dal\\models\\renting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\dal\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|solutionrelative:dal\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\dal\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|solutionrelative:dal\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\dal\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|solutionrelative:dal\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\dal\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|solutionrelative:dal\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\dal\\models\\dbclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|solutionrelative:dal\\models\\dbclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BEA50D99-A697-4E18-9839-90A382CB7886}|Server\\Server.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\server\\controllers\\sighcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BEA50D99-A697-4E18-9839-90A382CB7886}|Server\\Server.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\server\\controllers\\sighcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BEA50D99-A697-4E18-9839-90A382CB7886}|Server\\Server.csproj|solutionrelative:server\\controllers\\sighcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BEA50D99-A697-4E18-9839-90A382CB7886}|Server\\Server.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\dal\\models\\dbclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|solutionrelative:dal\\models\\dbclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEA50D99-A697-4E18-9839-90A382CB7886}|Server\\Server.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\server\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEA50D99-A697-4E18-9839-90A382CB7886}|Server\\Server.csproj|solutionrelative:server\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\bl\\api\\iblrenting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|solutionrelative:bl\\api\\iblrenting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\bl\\services\\blrenting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|solutionrelative:bl\\services\\blrenting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\dal\\services\\rentingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|solutionrelative:dal\\services\\rentingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\dal\\models\\renting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|solutionrelative:dal\\models\\renting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\dal\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|solutionrelative:dal\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\dal\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|solutionrelative:dal\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\dal\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|solutionrelative:dal\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\dal\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|solutionrelative:dal\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEA50D99-A697-4E18-9839-90A382CB7886}|Server\\Server.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BEA50D99-A697-4E18-9839-90A382CB7886}|Server\\Server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\dal\\api\\irenting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\dal\\api\\irenting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|solutionrelative:dal\\api\\irenting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\dal\\api\\icarservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\dal\\api\\icarservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|solutionrelative:dal\\api\\icarservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\bl\\customerinput\\modelcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\bl\\customerinput\\modelcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|solutionrelative:bl\\customerinput\\modelcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\bl\\services\\sighin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\bl\\services\\sighin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|solutionrelative:bl\\services\\sighin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\bl\\services\\sighup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\bl\\services\\sighup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|solutionrelative:bl\\services\\sighup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BEA50D99-A697-4E18-9839-90A382CB7886}|Server\\Server.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\server\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{BEA50D99-A697-4E18-9839-90A382CB7886}|Server\\Server.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\server\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{BEA50D99-A697-4E18-9839-90A382CB7886}|Server\\Server.csproj|solutionrelative:server\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BEA50D99-A697-4E18-9839-90A382CB7886}|Server\\Server.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{BEA50D99-A697-4E18-9839-90A382CB7886}|Server\\Server.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{BEA50D99-A697-4E18-9839-90A382CB7886}|Server\\Server.csproj|solutionrelative:server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\bl\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\bl\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|solutionrelative:bl\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\bl\\api\\isighup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\bl\\api\\isighup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|solutionrelative:bl\\api\\isighup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\bl\\api\\isighin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\bl\\api\\isighin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{64DD7D03-BE82-430F-AD49-CDD521D84074}|Bl\\Bl.csproj|solutionrelative:bl\\api\\isighin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\dal\\api\\iuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\dal\\api\\iuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|solutionrelative:dal\\api\\iuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\dal\\dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\dal\\dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|solutionrelative:dal\\dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\dal\\api\\icustomerservise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\dal\\api\\icustomerservise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|solutionrelative:dal\\api\\icustomerservise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|H:\\Project\\CarRental\\Bl\\Api\\ILogIn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\dal\\models\\time.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\dal\\models\\time.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|solutionrelative:dal\\models\\time.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\dal\\models\\price.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\dal\\models\\price.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|solutionrelative:dal\\models\\price.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\dal\\api\\iprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\dal\\api\\iprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|solutionrelative:dal\\api\\iprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\dal\\api\\itime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\dal\\api\\itime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|solutionrelative:dal\\api\\itime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\dal\\api\\iworkerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\dal\\api\\iworkerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|solutionrelative:dal\\api\\iworkerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\dal\\models\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\dal\\models\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|solutionrelative:dal\\models\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\dal\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\dal\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|solutionrelative:dal\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\finalproject\\carrental\\dal\\api\\iroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\finalproject\\carrental\\dal\\api\\iroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6FBEF64-441A-4715-B7C5-1A816D40FB8B}|Dal\\Dal.csproj|solutionrelative:dal\\api\\iroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -167,27 +167,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CustomerService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\Services\\CustomerService.cs",
-              "RelativeDocumentMoniker": "Dal\\Services\\CustomerService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\Services\\CustomerService.cs",
-              "RelativeToolTip": "Dal\\Services\\CustomerService.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAYwFoAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T09:54:36.31Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Customer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\models\\Customer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\models\\Customer.cs",
               "RelativeDocumentMoniker": "Dal\\models\\Customer.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\models\\Customer.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\models\\Customer.cs",
               "RelativeToolTip": "Dal\\models\\Customer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -195,11 +187,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\models\\User.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\models\\User.cs",
               "RelativeDocumentMoniker": "Dal\\models\\User.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\models\\User.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\models\\User.cs",
               "RelativeToolTip": "Dal\\models\\User.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAA9wBcAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -207,52 +199,88 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RentalAvailableController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Server\\Controllers\\RentalAvailableController.cs",
-              "RelativeDocumentMoniker": "Server\\Controllers\\RentalAvailableController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Server\\Controllers\\RentalAvailableController.cs",
-              "RelativeToolTip": "Server\\Controllers\\RentalAvailableController.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAawDEAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T13:00:38.727Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CustomerController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Server\\Controllers\\CustomerController.cs",
-              "RelativeDocumentMoniker": "Server\\Controllers\\CustomerController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Server\\Controllers\\CustomerController.cs",
-              "RelativeToolTip": "Server\\Controllers\\CustomerController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAWwGMAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T12:57:08.373Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "RentalAvailableController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Server\\Controllers\\RentalAvailableController.cs",
+              "RelativeDocumentMoniker": "Server\\Controllers\\RentalAvailableController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Server\\Controllers\\RentalAvailableController.cs",
+              "RelativeToolTip": "Server\\Controllers\\RentalAvailableController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAADgvzEAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T13:00:38.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Server\\Controllers\\CustomerController.cs",
+              "RelativeDocumentMoniker": "Server\\Controllers\\CustomerController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Server\\Controllers\\CustomerController.cs",
+              "RelativeToolTip": "Server\\Controllers\\CustomerController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAjwGMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T12:57:08.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "IBlRenting.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Bl\\Api\\IBlRenting.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Bl\\Api\\IBlRenting.cs",
               "RelativeDocumentMoniker": "Bl\\Api\\IBlRenting.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Bl\\Api\\IBlRenting.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Bl\\Api\\IBlRenting.cs",
               "RelativeToolTip": "Bl\\Api\\IBlRenting.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAIA5wBwAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAIA3wBwAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-30T06:42:08.137Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "dbClass.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\models\\dbClass.cs",
+              "RelativeDocumentMoniker": "Dal\\models\\dbClass.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\models\\dbClass.cs",
+              "RelativeToolTip": "Dal\\models\\dbClass.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAewCUAAACwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T09:56:05.97Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "SighController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Server\\Controllers\\SighController.cs",
+              "RelativeDocumentMoniker": "Server\\Controllers\\SighController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Server\\Controllers\\SighController.cs",
+              "RelativeToolTip": "Server\\Controllers\\SighController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAIwCAAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T13:27:50.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CustomerService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\Services\\CustomerService.cs",
+              "RelativeDocumentMoniker": "Dal\\Services\\CustomerService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\Services\\CustomerService.cs",
+              "RelativeToolTip": "Dal\\Services\\CustomerService.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAYwFoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T09:54:36.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "BlRenting.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Bl\\Services\\BlRenting.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Bl\\Services\\BlRenting.cs",
               "RelativeDocumentMoniker": "Bl\\Services\\BlRenting.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Bl\\Services\\BlRenting.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Bl\\Services\\BlRenting.cs",
               "RelativeToolTip": "Bl\\Services\\BlRenting.cs",
               "ViewState": "AgIAAGUBAAAAAAAAAAApwHYBAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -260,11 +288,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "RentingService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\Services\\RentingService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\Services\\RentingService.cs",
               "RelativeDocumentMoniker": "Dal\\Services\\RentingService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\Services\\RentingService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\Services\\RentingService.cs",
               "RelativeToolTip": "Dal\\Services\\RentingService.cs",
               "ViewState": "AgIAAKQAAAAAAAAAAAAhwK8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -273,22 +301,10 @@
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "SighController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Server\\Controllers\\SighController.cs",
-              "RelativeDocumentMoniker": "Server\\Controllers\\SighController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Server\\Controllers\\SighController.cs",
-              "RelativeToolTip": "Server\\Controllers\\SighController.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAADwvyEAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T13:27:50.65Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "Car.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\models\\Car.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\models\\Car.cs",
               "RelativeDocumentMoniker": "Dal\\models\\Car.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\models\\Car.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\models\\Car.cs",
               "RelativeToolTip": "Dal\\models\\Car.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAA9wBsAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -296,11 +312,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Renting.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\models\\Renting.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\models\\Renting.cs",
               "RelativeDocumentMoniker": "Dal\\models\\Renting.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\models\\Renting.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\models\\Renting.cs",
               "RelativeToolTip": "Dal\\models\\Renting.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAIA1wBcAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -308,23 +324,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "dbClass.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\models\\dbClass.cs",
-              "RelativeDocumentMoniker": "Dal\\models\\dbClass.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\models\\dbClass.cs",
-              "RelativeToolTip": "Dal\\models\\dbClass.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAApwCUAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T09:56:05.97Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 13,
               "Title": "IRenting.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\Api\\IRenting.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\Api\\IRenting.cs",
               "RelativeDocumentMoniker": "Dal\\Api\\IRenting.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\Api\\IRenting.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\Api\\IRenting.cs",
               "RelativeToolTip": "Dal\\Api\\IRenting.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwBQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -334,9 +338,9 @@
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Server\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Server\\Program.cs",
               "RelativeDocumentMoniker": "Server\\Program.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Server\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Server\\Program.cs",
               "RelativeToolTip": "Server\\Program.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAACEAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -346,9 +350,9 @@
               "$type": "Document",
               "DocumentIndex": 14,
               "Title": "ICarService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\Api\\ICarService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\Api\\ICarService.cs",
               "RelativeDocumentMoniker": "Dal\\Api\\ICarService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\Api\\ICarService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\Api\\ICarService.cs",
               "RelativeToolTip": "Dal\\Api\\ICarService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwA4AAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -358,9 +362,9 @@
               "$type": "Document",
               "DocumentIndex": 20,
               "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Bl\\Class1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Bl\\Class1.cs",
               "RelativeDocumentMoniker": "Bl\\Class1.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Bl\\Class1.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Bl\\Class1.cs",
               "RelativeToolTip": "Bl\\Class1.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAQwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -370,9 +374,9 @@
               "$type": "Document",
               "DocumentIndex": 16,
               "Title": "SighIn.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Bl\\Services\\SighIn.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Bl\\Services\\SighIn.cs",
               "RelativeDocumentMoniker": "Bl\\Services\\SighIn.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Bl\\Services\\SighIn.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Bl\\Services\\SighIn.cs",
               "RelativeToolTip": "Bl\\Services\\SighIn.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAswCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -382,9 +386,9 @@
               "$type": "Document",
               "DocumentIndex": 15,
               "Title": "ModelCustomer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Bl\\CustomerInput\\ModelCustomer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Bl\\CustomerInput\\ModelCustomer.cs",
               "RelativeDocumentMoniker": "Bl\\CustomerInput\\ModelCustomer.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Bl\\CustomerInput\\ModelCustomer.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Bl\\CustomerInput\\ModelCustomer.cs",
               "RelativeToolTip": "Bl\\CustomerInput\\ModelCustomer.cs",
               "ViewState": "AQIAAB4AAAAAAAAAAAAkwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -394,9 +398,9 @@
               "$type": "Document",
               "DocumentIndex": 17,
               "Title": "SighUp.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Bl\\Services\\SighUp.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Bl\\Services\\SighUp.cs",
               "RelativeDocumentMoniker": "Bl\\Services\\SighUp.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Bl\\Services\\SighUp.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Bl\\Services\\SighUp.cs",
               "RelativeToolTip": "Bl\\Services\\SighUp.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAswCkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -416,9 +420,9 @@
               "$type": "Document",
               "DocumentIndex": 19,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Server\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Server\\appsettings.json",
               "RelativeDocumentMoniker": "Server\\appsettings.json",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Server\\appsettings.json",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Server\\appsettings.json",
               "RelativeToolTip": "Server\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -428,9 +432,9 @@
               "$type": "Document",
               "DocumentIndex": 18,
               "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Server\\appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Server\\appsettings.Development.json",
               "RelativeDocumentMoniker": "Server\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Server\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Server\\appsettings.Development.json",
               "RelativeToolTip": "Server\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -490,9 +494,9 @@
               "$type": "Document",
               "DocumentIndex": 24,
               "Title": "Dal.csproj",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\Dal.csproj",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\Dal.csproj",
               "RelativeDocumentMoniker": "Dal\\Dal.csproj",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\Dal.csproj",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\Dal.csproj",
               "RelativeToolTip": "Dal\\Dal.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -502,9 +506,9 @@
               "$type": "Document",
               "DocumentIndex": 22,
               "Title": "ISighIn.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Bl\\Api\\ISighIn.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Bl\\Api\\ISighIn.cs",
               "RelativeDocumentMoniker": "Bl\\Api\\ISighIn.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Bl\\Api\\ISighIn.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Bl\\Api\\ISighIn.cs",
               "RelativeToolTip": "Bl\\Api\\ISighIn.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -514,9 +518,9 @@
               "$type": "Document",
               "DocumentIndex": 21,
               "Title": "ISighUp.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Bl\\Api\\ISighUp.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Bl\\Api\\ISighUp.cs",
               "RelativeDocumentMoniker": "Bl\\Api\\ISighUp.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Bl\\Api\\ISighUp.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Bl\\Api\\ISighUp.cs",
               "RelativeToolTip": "Bl\\Api\\ISighUp.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -526,9 +530,9 @@
               "$type": "Document",
               "DocumentIndex": 23,
               "Title": "IUser.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\Api\\IUser.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\Api\\IUser.cs",
               "RelativeDocumentMoniker": "Dal\\Api\\IUser.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\Api\\IUser.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\Api\\IUser.cs",
               "RelativeToolTip": "Dal\\Api\\IUser.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -538,9 +542,9 @@
               "$type": "Document",
               "DocumentIndex": 25,
               "Title": "ICustomerServise.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\Api\\ICustomerServise.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\Api\\ICustomerServise.cs",
               "RelativeDocumentMoniker": "Dal\\Api\\ICustomerServise.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\Api\\ICustomerServise.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\Api\\ICustomerServise.cs",
               "RelativeToolTip": "Dal\\Api\\ICustomerServise.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -560,9 +564,9 @@
               "$type": "Document",
               "DocumentIndex": 27,
               "Title": "Time.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\models\\Time.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\models\\Time.cs",
               "RelativeDocumentMoniker": "Dal\\models\\Time.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\models\\Time.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\models\\Time.cs",
               "RelativeToolTip": "Dal\\models\\Time.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -572,9 +576,9 @@
               "$type": "Document",
               "DocumentIndex": 28,
               "Title": "Price.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\models\\Price.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\models\\Price.cs",
               "RelativeDocumentMoniker": "Dal\\models\\Price.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\models\\Price.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\models\\Price.cs",
               "RelativeToolTip": "Dal\\models\\Price.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -584,9 +588,9 @@
               "$type": "Document",
               "DocumentIndex": 29,
               "Title": "IPrice.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\Api\\IPrice.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\Api\\IPrice.cs",
               "RelativeDocumentMoniker": "Dal\\Api\\IPrice.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\Api\\IPrice.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\Api\\IPrice.cs",
               "RelativeToolTip": "Dal\\Api\\IPrice.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -596,9 +600,9 @@
               "$type": "Document",
               "DocumentIndex": 30,
               "Title": "ITime.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\Api\\ITime.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\Api\\ITime.cs",
               "RelativeDocumentMoniker": "Dal\\Api\\ITime.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\Api\\ITime.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\Api\\ITime.cs",
               "RelativeToolTip": "Dal\\Api\\ITime.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -608,9 +612,9 @@
               "$type": "Document",
               "DocumentIndex": 31,
               "Title": "IWorkerService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\Api\\IWorkerService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\Api\\IWorkerService.cs",
               "RelativeDocumentMoniker": "Dal\\Api\\IWorkerService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\Api\\IWorkerService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\Api\\IWorkerService.cs",
               "RelativeToolTip": "Dal\\Api\\IWorkerService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -620,9 +624,9 @@
               "$type": "Document",
               "DocumentIndex": 32,
               "Title": "Worker.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\models\\Worker.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\models\\Worker.cs",
               "RelativeDocumentMoniker": "Dal\\models\\Worker.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\models\\Worker.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\models\\Worker.cs",
               "RelativeToolTip": "Dal\\models\\Worker.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -632,9 +636,9 @@
               "$type": "Document",
               "DocumentIndex": 33,
               "Title": "Role.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\models\\Role.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\models\\Role.cs",
               "RelativeDocumentMoniker": "Dal\\models\\Role.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\models\\Role.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\models\\Role.cs",
               "RelativeToolTip": "Dal\\models\\Role.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -644,9 +648,9 @@
               "$type": "Document",
               "DocumentIndex": 34,
               "Title": "IRoleService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\Api\\IRoleService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\Api\\IRoleService.cs",
               "RelativeDocumentMoniker": "Dal\\Api\\IRoleService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\project!!!!!!!\\FinalProject\\CarRental\\Dal\\Api\\IRoleService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05D4\u05E0\u05D3\u05E1\u05D0\u05D9\u05DD\\try project\\FinalProject\\CarRental\\Dal\\Api\\IRoleService.cs",
               "RelativeToolTip": "Dal\\Api\\IRoleService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

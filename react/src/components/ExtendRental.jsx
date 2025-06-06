@@ -104,12 +104,12 @@ const ExtendRental = () => {
                             <input
                                 type="datetime-local"
                                 min={rental.returnTime ? new Date(rental.returnTime
-                                    ).toISOString().slice(0, 16) : ""}
-                                max={maxExtendDate ? new Date(maxExtendDate).toISOString().slice(0, 16) : ""}
+                                    ).toLocaleString().slice(0, 16) : ""}
+                                max={maxExtendDate ? new Date(maxExtendDate).toLocaleString().slice(0, 16) : ""}
                                 value={selectedDate}
                                 onChange={handleDateChange}
                                 required
-                                style={styles.input}
+                                style={styles.input} 
                                 disabled={loading}
                                 />
                             </label>

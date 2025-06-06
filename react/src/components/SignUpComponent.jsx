@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { fetchSighUpAsyncAction, fetchLoginAsyncAction } from "../redux/Thunk";
 import { clearError, clearMessage } from "../redux/sighSlice";
-import "./SignUpComponent.css";
+import "./AppTheme.css";
 
 const carImgUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Toyota_Yaris_II_1.3_VVT-i_Facelift_front_20100801.jpg/800px-Toyota_Yaris_II_1.3_VVT-i_Facelift_front_20100801.jpg";
 
@@ -26,7 +26,7 @@ const SignUpLoginComponent = () => {
     phoneNumber: "",
     email: "",
     city: "",
-    address: "",
+    street: "",
     buildingNumber: "",
     password: ""
   });
@@ -130,7 +130,7 @@ const SignUpLoginComponent = () => {
             <input name="phoneNumber" placeholder="מספר טלפון" onChange={handleChange} required />
             <input name="email" placeholder="אימייל" type="email" onChange={handleChange} required />
             <input name="city" placeholder="עיר" onChange={handleChange} required />
-            <input name="address" placeholder="רחוב" onChange={handleChange} required />
+            <input name="street" placeholder="רחוב" onChange={handleChange} required />
             <input name="buildingNumber" placeholder="מספר בית" onChange={handleChange} />
             <input name="password" placeholder="סיסמה" type="password" onChange={handleChange} required />
             <button type="submit" disabled={loading}>

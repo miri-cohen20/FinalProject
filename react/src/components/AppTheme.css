@@ -1,0 +1,422 @@
+:root {
+  --primary: #1a237e;        /* כחול כהה */
+  --secondary: #fbc02d;      /* צהוב מקצועי */
+  --secondary-hover: #ffd740;
+  --accent: #1976d2;         /* כחול טורקיז */
+  --success: #43a047;
+  --danger: #e53935;
+  --bg: #f4f7fb;
+  --card-bg: #fff;
+  --muted: #6b7b8a;
+  --radius: 16px;
+  --shadow: 0 4px 32px 0 rgba(26,35,126,0.07);
+  --transition: 0.18s cubic-bezier(.4,0,.2,1);
+  font-family: 'Heebo', 'Assistant', Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  background: var(--bg);
+  color: var(--primary);
+  font-family: var(--font);
+  box-sizing: border-box;
+}
+
+#root, .main-app-container {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* מרכז אופקית */
+  justify-content: center;/* מרכז אנכית */
+}
+
+/* עמודי כרטיס/פופאפ/טופס וכו' */
+.card, .popup-content, .form-card, .success-container, .payment-container, .extend-container,
+.activity-card, .car-rental-card, .signup-login-box {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 38px 34px 28px 34px;
+  margin: 0 auto 28px auto;
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  animation: fade-in .5s;
+}
+
+@media (max-width: 600px) {
+  .card, .popup-content, .form-card, .success-container, .payment-container, .extend-container,
+  .activity-card, .car-rental-card, .signup-login-box {
+    padding: 16px 3vw 12px 3vw;
+    max-width: 98vw;
+  }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(30px);}
+  100% { opacity: 1; transform: none;}
+}
+
+/* כותרות */
+h1, h2, h3, h4, h5 {
+  color: var(--primary);
+  font-weight: 900;
+  margin: 0 0 18px 0;
+  letter-spacing: .5px;
+  font-family: inherit;
+}
+h1 {font-size: 2.1em;}
+h2 {font-size: 1.35em;}
+h3 {font-size: 1.1em;}
+
+/* כפתורים */
+button, .btn, .client-btn, .activity-button, .car-rental-button {
+  background: linear-gradient(90deg, var(--secondary) 0%, var(--accent) 100%);
+  color: var(--primary);
+  border: none;
+  border-radius: 9px;
+  padding: 13px 32px;
+  font-size: 1.08em;
+  font-weight: bold;
+  box-shadow: 0 2px 18px 0 rgba(26,35,126,0.09);
+  cursor: pointer;
+  transition: background var(--transition), color .15s, box-shadow .18s;
+  margin: 0 0 0 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+button:hover, .btn:hover, .client-btn:hover, .activity-button:hover, .car-rental-button:hover {
+  background: linear-gradient(90deg, var(--accent) 0%, var(--secondary-hover) 90%);
+  color: #fff;
+  box-shadow: 0 6px 24px rgba(26,35,126,0.18);
+}
+button:disabled, .btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  filter: grayscale(30%);
+}
+
+/* קבוצות כפתורים */
+.button-group, .client-btns, .activity-buttons, .success-buttons, .end-success-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+  margin: 22px 0 0 0;
+}
+@media (max-width: 500px) {
+  .button-group, .client-btns, .activity-buttons, .success-buttons, .end-success-buttons {
+    gap: 10px;
+  }
+}
+
+/* שדות טופס */
+input, textarea, select {
+  font-family: inherit;
+  font-size: 1em;
+  border-radius: 8px;
+  border: 1.5px solid #bdbdfc;
+  outline: none;
+  background: #f8f8ff;
+  color: var(--primary);
+  padding: 10px 13px;
+  margin-bottom: 13px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.13s;
+}
+input:focus, textarea:focus, select:focus {
+  border: 1.5px solid var(--accent);
+  box-shadow: 0 1px 3px rgba(26,35,126,0.11);
+}
+
+/* תוויות */
+label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--primary);
+  text-align: right;
+  font-size: 1.08em;
+  display: block;
+}
+
+/* הודעות */
+.error, .popup-error, .form-card .error {
+  color: var(--danger);
+  font-weight: bold;
+  background: #fff5f5;
+  border-radius: 7px;
+  padding: 9px 0;
+  margin: 12px 0;
+  font-size: 1.07em;
+  box-shadow: 0 2px 10px 0 rgba(252,92,125,0.06);
+}
+.success, .popup-success, .form-card .success {
+  color: var(--success);
+  background: #e7ffe9;
+  border-radius: 7px;
+  padding: 8px 13px;
+  margin-top: 6px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* פופאפ */
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(26,35,126,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+}
+.popup-content {
+  animation: fade-in .5s;
+}
+.popup-close {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color .15s;
+}
+.popup-close:hover { color: var(--primary); }
+
+/* טעינה */
+.loader, .spinner, .activity-loader {
+  width: 32px;
+  height: 32px;
+  border: 4px solid #bdbdfc;
+  border-top: 4px solid var(--secondary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+  display: block;
+}
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+/* עמודי הצלחה */
+.success-container, .end-success-container, .complaint-success-container {
+  background: #e8f5e9;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  margin: 70px auto 0 auto;
+}
+.success-icon, .end-success-icon, .complaint-success-icon {
+  font-size: 54px;
+  margin-bottom: 17px;
+  color: var(--success);
+}
+.success-title, .end-success-title, .complaint-success-title {
+  color: var(--success);
+  margin-bottom: 8px;
+}
+.success-buttons, .end-success-buttons, .complaint-success-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 24px;
+}
+.success-button, .end-success-button, .complaint-success-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background .13s;
+}
+.success-button-secondary, .end-success-button-secondary, .complaint-success-button-secondary {
+  background: #e9ecef;
+  color: #333;
+}
+
+/* רשימות */
+ul, ol { padding-right: 18px; }
+li { margin-bottom: 7px; }
+
+/* גלילה */
+::-webkit-scrollbar {
+  width: 9px;
+  background: #e0e5ea;
+}
+::-webkit-scrollbar-thumb {
+  background: #b3c6e0;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a1badf;
+}
+
+/* רקע לדף כולו */
+.activity-container {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #e3f0fc 0%, #1976d2 100%);
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* כותרת גדולה עם גוון */
+.activity-title {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0 6px 24px #1976d2cc;
+  letter-spacing: 2px;
+  margin-top: 38px;
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+/* גריד גלריה */
+.activity-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 38px;
+  width: 100vw;
+  max-width: 1320px;
+  padding: 0 4vw 60px 4vw;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* כרטיס עיצובי */
+.activity-card {
+  position: relative;
+  background: linear-gradient(110deg, #fff 85%, #fbc02d22 100%);
+  border-radius: 22px;
+  box-shadow: 0 8px 38px 0 rgba(26,35,126,0.14), 0 1.5px 8px rgba(41,121,255,0.06);
+  padding: 32px 28px 26px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  overflow: hidden;
+  transition: transform .24s, box-shadow .24s;
+  min-height: 258px;
+  cursor: pointer;
+}
+.activity-card:hover {
+  transform: translateY(-10px) scale(1.035);
+  box-shadow: 0 18px 52px 0 #1976d22c, 0 2.5px 12px #1a237e22;
+  background: linear-gradient(110deg, #f5f7fa 70%, #fbc02d33 100%);
+}
+
+.activity-card::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -55px;
+  width: 170px;
+  height: 170px;
+  background: radial-gradient(circle at 30% 60%, #fbc02d44 0%, transparent 78%);
+  opacity: 0.22;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* אייקון */
+.activity-icon {
+  font-size: 2.7rem;
+  margin-bottom: 7px;
+  color: #ffc107;
+  filter: drop-shadow(0 4px 14px #ffc10788);
+  margin-right: 7px;
+  z-index: 2;
+}
+
+.activity-info {
+  color: #212a43;
+  font-size: 1.13rem;
+  margin-bottom: 18px;
+  width: 100%;
+  font-weight: 500;
+  z-index: 2;
+}
+.activity-info b {
+  color: var(--muted);
+  font-weight: 600;
+}
+.activity-value {
+  color: var(--accent);
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+/* כפתור */
+.activity-button {
+  background: linear-gradient(90deg, #fbc02d 0%, #1976d2 100%);
+  color: #fff;
+  font-size: 1.09em;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 13px 32px;
+  box-shadow: 0 2px 18px 0 #fbc02d33;
+  cursor: pointer;
+  transition: background .19s, box-shadow .19s, transform .13s;
+  margin-top: 8px;
+  z-index: 2;
+}
+.activity-button:hover {
+  background: linear-gradient(90deg, #1976d2 0%, #fbc02d 100%);
+  color: #fff;
+  box-shadow: 0 7px 24px #ffd74077;
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* טעינה */
+.activity-loading-container {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #e3f0fc 0%, #1976d2 100%);
+}
+.activity-loader {
+  border: 6px solid #bdbdfc;
+  border-top: 6px solid #fbc02d;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 22px;
+}
+@keyframes spin { 100% { transform: rotate(360deg); } }
+.activity-loading-text {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-shadow: 0 2px 8px #1976d2cc;
+}
+
+/* התאמה מובייל */
+@media (max-width: 800px) {
+  .activity-title { font-size: 1.45rem; }
+  .activity-list { grid-template-columns: 1fr; padding: 0 2vw 38px 2vw;}
+  .activity-card { min-height: 178px; padding: 22px 12px;}
+}

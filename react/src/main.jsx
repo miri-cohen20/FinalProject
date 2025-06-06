@@ -4,6 +4,7 @@ import './index.css';
 import App from './App.jsx';
 import { Provider } from 'react-redux'; // אל תשכח לייבא את זה
 import store from './redux/store'; // ייבוא ה-store לפי הנתיב הנכון
+import "./components/AppTheme.css";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
